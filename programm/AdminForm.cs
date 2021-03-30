@@ -21,11 +21,12 @@ namespace programm
         public AdminForm()
         {
             InitializeComponent();
+            this.StyleManager = metroStyleManager1;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            this.StyleManager = metroStyleManager1;
+            
             metroTabControl1.SelectedTab = metroTabControl1.TabPages[0];
             btnRefresh_Click(this, EventArgs.Empty);
         }
@@ -34,6 +35,7 @@ namespace programm
         {
             this.Hide();
             LoginForm log = new LoginForm();
+            this.StyleManager.Clone(log);
             log.Show();
         }
 
@@ -164,35 +166,43 @@ namespace programm
             {
                 case 0:
                     PolzForm Pol = new PolzForm();
-                    Pol.Show();
+                    this.StyleManager.Clone(Pol);
+                    Pol.ShowDialog();
                     break;
                 case 1:
                     ClientForm Cli = new ClientForm();
-                    Cli.Show();
+                    this.StyleManager.Clone(Cli);
+                    Cli.ShowDialog();
                     break;
                 case 2:
                     ZakazForm Zak = new ZakazForm();
-                    Zak.Show();
+                    this.StyleManager.Clone(Zak);
+                    Zak.ShowDialog();
                     break;
                 case 3:
                     SotrForm Sot = new SotrForm();
-                    Sot.Show();
+                    this.StyleManager.Clone(Sot);
+                    Sot.ShowDialog();
                     break;
                 case 4:
                     UslugForm Usl = new UslugForm();
-                    Usl.Show();
+                    this.StyleManager.Clone(Usl);
+                    Usl.ShowDialog();
                     break;
                 case 5:
                     SkladForm Skd = new SkladForm();
-                    Skd.Show();
+                    this.StyleManager.Clone(Skd);
+                    Skd.ShowDialog();
                     break;
                 case 6:
                     OkUslForm Ou = new OkUslForm();
-                    Ou.Show();
+                    this.StyleManager.Clone(Ou);
+                    Ou.ShowDialog();
                     break;
                 case 7:
                     IspDetForm IspD = new IspDetForm();
-                    IspD.Show();
+                    this.StyleManager.Clone(IspD);
+                    IspD.ShowDialog();
                     break;
             }
         }
@@ -204,35 +214,43 @@ namespace programm
             {
                 case 0:
                     UpPolzForm UpPol = new UpPolzForm(id);
-                    UpPol.Show();
+                    this.StyleManager.Clone(UpPol);
+                    UpPol.ShowDialog();
                     break;
                 case 1:
                     UpClientForm UpCli = new UpClientForm(id);
-                    UpCli.Show();
+                    this.StyleManager.Clone(UpCli);
+                    UpCli.ShowDialog();
                     break;
                 case 2:
                     UpZakazForm UpZak = new UpZakazForm(id);
-                    UpZak.Show();
+                    this.StyleManager.Clone(UpZak);
+                    UpZak.ShowDialog();
                     break;
                 case 3:
                     UpSotrForm UpSot = new UpSotrForm(id);
-                    UpSot.Show();
+                    this.StyleManager.Clone(UpSot);
+                    UpSot.ShowDialog();
                     break;
                 case 4:
                     UpUslugForm UpUsl = new UpUslugForm(id);
-                    UpUsl.Show();
+                    this.StyleManager.Clone(UpUsl);
+                    UpUsl.ShowDialog();
                     break;
                 case 5:
                     UpSkladForm UpSkd = new UpSkladForm(id);
-                    UpSkd.Show();
+                    this.StyleManager.Clone(UpSkd);
+                    UpSkd.ShowDialog();
                     break;
                 case 6:
                     UpOkUslForm UpOu = new UpOkUslForm(id);
-                    UpOu.Show();
+                    this.StyleManager.Clone(UpOu);
+                    UpOu.ShowDialog();
                     break;
                 case 7:
                     UpIspDetForm UpIspD = new UpIspDetForm(id);
-                    UpIspD.Show();
+                    this.StyleManager.Clone(UpIspD);
+                    UpIspD.ShowDialog();
                     break;
             }
         }

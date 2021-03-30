@@ -38,6 +38,7 @@ namespace programm
         private void btnPrice_Click(object sender, EventArgs e)
         {
             PriceListForm pri = new PriceListForm();
+            this.StyleManager.Clone(pri);
             pri.Show();
         }
 
@@ -45,12 +46,14 @@ namespace programm
         {
             this.Hide();
             LoginForm log = new LoginForm();
+            this.StyleManager.Clone(log);
             log.Show();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             ManageZakazForm mzak = new ManageZakazForm();
+            this.StyleManager.Clone(mzak);
             mzak.Show();
         }
 

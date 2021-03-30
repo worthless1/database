@@ -169,10 +169,10 @@
             this.ComboBox3.FormattingEnabled = true;
             this.ComboBox3.ItemHeight = 19;
             this.ComboBox3.Items.AddRange(new object[] {
-            "Администратор",
-            "Менеджер",
-            "Мастер",
-            "Клиент"});
+            "1",
+            "2",
+            "3",
+            "4"});
             this.ComboBox3.Location = new System.Drawing.Point(217, 162);
             this.ComboBox3.Name = "ComboBox3";
             this.ComboBox3.Size = new System.Drawing.Size(140, 25);

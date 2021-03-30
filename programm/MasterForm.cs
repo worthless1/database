@@ -42,15 +42,18 @@ namespace programm
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
             LoginForm log = new LoginForm();
+            this.StyleManager.Clone(log);
+            this.Hide();
             log.Show();
         }
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
-            if (mSwitch.Checked) StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-            else StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            if (mSwitch.Checked) 
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+            else 
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,7 +78,8 @@ namespace programm
 
         private void btnCompl_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "") MessageBox.Show("Выберите заказ для закрытия", "Выполнение заказа", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (comboBox1.Text == "") 
+                MessageBox.Show("Выберите заказ для закрытия", "Выполнение заказа", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 SqlCommand sql = new SqlCommand("UPDATE Заказы SET [Статус] = @st, [Дата закрытия] = @dataz WHERE [Номер заказа] = @stroka", connect);

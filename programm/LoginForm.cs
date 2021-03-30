@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace programm
 {
@@ -16,14 +17,18 @@ namespace programm
         SqlConnection connect = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True"); // Подключение к БД
         SqlDataReader reader;
         string login, password;
+        int attempts = 0;
+        int first, second;
         public LoginForm()
         {
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
+            PassBox.PasswordChar = '•';
         }
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
+            //смена темы
             if (mSwitch.Checked) 
                 StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
             else 
@@ -35,15 +40,31 @@ namespace programm
             Application.Exit();
         }
 
-        private void helpBtn_Click(object sender, EventArgs e)
+        private void btnReg_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Обратитесь за помощью к администратору", "Не можете войти?");
+            regForm rg = new regForm();
+            this.StyleManager.Clone(rg);
+            this.Hide();
+            rg.Show();
+
+        }
+
+        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            //показ пароля
+            if (checkBox1.Checked)
+                PassBox.PasswordChar = '\0';
+            else
+                PassBox.PasswordChar = '•';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //авторизация
+            int role, id;
             login = LogBox.Text;
-            password = PassBox.Text;
+            password = getHashSha256(PassBox.Text);
+
             connect.Open();
             SqlCommand sql = new SqlCommand($"SELECT * FROM Пользователи WHERE Логин = '{login}' and Пароль = '{password}'", connect);
             reader = sql.ExecuteReader();
@@ -52,42 +73,111 @@ namespace programm
             {
                 while (reader.Read())
                 {
-                    object Role = reader.GetValue(3);
-                    object id = reader.GetValue(0);
-                    //admin
-                    if (Convert.ToString(Role) == "Администратор")
+                    role = reader.GetInt32(3);
+                    id = reader.GetInt32(0);
+
+                    switch (role)
                     {
-                        this.Hide();
-                        AdminForm adm = new AdminForm();
-                        adm.Show();
-                    }
-                    //manager
-                    else if (Convert.ToString(Role) == "Менеджер")
-                    {
-                        this.Hide();
-                        ManageForm mng = new ManageForm(Convert.ToInt32(id));
-                        mng.Show();
-                    }
-                    //master
-                    else if (Convert.ToString(Role) == "Мастер")
-                    {
-                        this.Hide();
-                        MasterForm mst = new MasterForm();
-                        mst.Show();
-                    }
-                    //client
-                    else if (Convert.ToString(Role) == "Клиент")
-                    {
-                        this.Hide();
-                        OpenClientForm oclt = new OpenClientForm(Convert.ToInt32(id));
-                        oclt.Show();
+                        case 1:
+                            AdminForm adm = new AdminForm();
+                            this.StyleManager.Clone(adm);
+                            this.Hide();
+                            adm.Show();
+                            break;
+                        case 2:
+                            ManageForm mng = new ManageForm(id);
+                            this.StyleManager.Clone(mng);
+                            this.Hide();
+                            mng.Show();
+                            break;
+                        case 3:
+                            MasterForm mst = new MasterForm();
+                            this.StyleManager.Clone(mst);
+                            mst.Show();
+                            break;
+                        case 4:
+                            OpenClientForm oclt = new OpenClientForm(id);
+                            this.StyleManager.Clone(oclt);
+                            this.Hide();
+                            oclt.Show();
+                            break;
                     }
                 }
             }
-            else 
+            else { 
                 MessageBox.Show("Неверный логин или пароль, попробуйте снова", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                attempts++;
+                PassBox.Clear();
+            }
             reader.Close();
             connect.Close();
+
+            if (attempts >= 3)
+                capcha();
+        }
+
+        private void btnVerify_Click(object sender, EventArgs e)
+        {
+            //проверка капчи
+            if (first + second == Convert.ToInt32(capchaBox.Text))
+            {
+                btnVerify.Visible = false;
+                btnReplace.Visible = false;
+                capchaBox.Visible = false;
+
+                checkBox1.Visible = true;
+                LogBox.Visible = true;
+                PassBox.Visible = true;
+                btnLogin.Visible = true;
+                logLabel.Text = "Логин";
+                passLabel.Text = "Пароль";
+            }
+            else
+                getCapcha();
+        }
+
+        private string getHashSha256(string text)
+        {
+            //Хэширование пароля
+            byte[] bytes = Encoding.UTF8.GetBytes(text);
+            SHA256Managed hashstring = new SHA256Managed();
+            byte[] hash = hashstring.ComputeHash(bytes);
+            string hashString = string.Empty;
+            foreach (byte x in hash)
+            {
+                hashString += String.Format("{0:x2}", x);
+            }
+            return hashString.ToString();
+        }
+
+        void capcha()
+        {
+            //подготовка капчи
+            logLabel.Text = "Вы не робот?";
+            btnVerify.Visible = true;
+            btnReplace.Visible = true;
+            capchaBox.Visible = true;
+
+            LogBox.Visible = false;
+            PassBox.Visible = false;
+            btnLogin.Visible = false;
+            checkBox1.Visible = false;
+
+            getCapcha();
+        }
+
+        void getCapcha()
+        {
+            //получение капчи
+            Random rdn = new Random();
+            first = rdn.Next(1, 10);
+            second = rdn.Next(1, 20);
+            passLabel.Text = Convert.ToString(first) + " + " + Convert.ToString(second) + " = ?";
+        }
+
+        private void btnReplace_Click(object sender, EventArgs e)
+        {
+            getCapcha();
         }
     }
 }
