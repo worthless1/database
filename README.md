@@ -1,1 +1,1 @@
-Курсовой проект
+Course project
