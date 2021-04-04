@@ -28,7 +28,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Repair_serviceDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\edu\help me pls\Курсовик\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\edu\2021\Курсовик2\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
         <rd:TableName>diagram1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -85,7 +85,6 @@
                     </ChartDataPoint>
                   </ChartDataPoints>
                   <Type>Line</Type>
-                  <Subtype>Smooth</Subtype>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />

@@ -13,8 +13,7 @@ namespace programm
 {
     public partial class MasterForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = 
-            (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         public MasterForm()
         {
             InitializeComponent();
@@ -25,7 +24,6 @@ namespace programm
             // TODO: данная строка кода позволяет загрузить данные в таблицу "Repair_serviceDataSet.Склад1". При необходимости она может быть перемещена или удалена.
             this.Склад1TableAdapter.Fill(this.Repair_serviceDataSet.Склад1);
             this.reportViewer1.RefreshReport();
-            this.StyleManager = metroStyleManager1;
             connect.Open();
             SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE [Статус] = 'В работе'", connect);
             SqlDataReader reader = sql.ExecuteReader();
@@ -38,6 +36,10 @@ namespace programm
             }
             reader.Close();
             connect.Close();
+
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

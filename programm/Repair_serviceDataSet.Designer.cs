@@ -7529,7 +7529,7 @@ SELECT [Номер заказа], [Код клиента], [Дата заказ�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7978,7 +7978,7 @@ SELECT [Код ИД], [Номер заказа], [Код детали], Коли
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8385,7 +8385,7 @@ SELECT [Код клиента], Фамилия, Имя, Отчество, Тел
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8841,7 +8841,7 @@ SELECT [Код ОУ], [Номер заказа], [Код сотрудника], 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9263,7 +9263,7 @@ SELECT [Код пользователя], Логин, Пароль, [Урове�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9657,7 +9657,7 @@ SELECT [Код детали], Наименование, Цена, Осталос
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10070,7 +10070,7 @@ SELECT [Код сотрудника], Фамилия, Имя, Отчество, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10548,7 +10548,7 @@ SELECT [Код услуги], Наименование, Цена, Примеча
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10941,7 +10941,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11329,7 +11329,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11689,7 +11689,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12024,7 +12024,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12254,7 +12254,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12422,7 +12422,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::programm.Properties.Settings.Default.Repair_serviceConnectionString;
+            this._connection.ConnectionString = global::programm.Properties.Settings.Default.con;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

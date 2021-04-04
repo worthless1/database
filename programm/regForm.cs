@@ -15,7 +15,7 @@ namespace programm
 {
     public partial class regForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True"); // Подключение к БД
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         public regForm()
         {
             InitializeComponent();
@@ -81,6 +81,13 @@ namespace programm
 
             if (!Char.IsDigit(number) && number != 8)
                 e.Handled = true;
+        }
+
+        private void regForm_Load(object sender, EventArgs e)
+        {
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
     }
 }

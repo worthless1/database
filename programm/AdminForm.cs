@@ -13,7 +13,7 @@ namespace programm
 {
     public partial class AdminForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         SqlDataAdapter adapter;
         string table_name;
         DataSet ds = new DataSet();
@@ -29,6 +29,8 @@ namespace programm
             
             metroTabControl1.SelectedTab = metroTabControl1.TabPages[0];
             btnRefresh_Click(this, EventArgs.Empty);
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -37,13 +37,18 @@ namespace programm
             this.reportViewer4.RefreshReport();
             this.reportViewer5.RefreshReport();
             this.reportViewer6.RefreshReport();
-            this.StyleManager = metroStyleManager1;
+
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
-            if (mSwitch.Checked) StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-            else StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            if (mSwitch.Checked) 
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+            else 
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
         }
     }
 }

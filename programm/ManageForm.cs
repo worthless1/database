@@ -13,8 +13,7 @@ namespace programm
 {
     public partial class ManageForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = 
-            (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         public ManageForm(int id)
         {
             InitializeComponent();
@@ -62,6 +61,10 @@ namespace programm
             // TODO: данная строка кода позволяет загрузить данные в таблицу "Repair_serviceDataSet.diagram1". При необходимости она может быть перемещена или удалена.
             this.diagram1TableAdapter.Fill(this.Repair_serviceDataSet.diagram1);
             this.reportViewer1.RefreshReport();
+
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)

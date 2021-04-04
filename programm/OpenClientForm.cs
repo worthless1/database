@@ -13,8 +13,7 @@ namespace programm
 {
     public partial class OpenClientForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = 
-            (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         public OpenClientForm(int id)
         {
             InitializeComponent();
@@ -52,7 +51,9 @@ namespace programm
 
         private void OpenClientForm_Load(object sender, EventArgs e)
         {
-            this.StyleManager = metroStyleManager1;
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace programm
 {
     public partial class PolzForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         public PolzForm()
         {
             InitializeComponent();

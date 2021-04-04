@@ -14,7 +14,7 @@ namespace programm
 {
     public partial class LoginForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection connect = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = Repair_service;Integrated Security=True"); // Подключение к БД
+        SqlConnection connect = new SqlConnection(Properties.Settings.Default.con);
         SqlDataReader reader;
         string login, password;
         int attempts = 0;

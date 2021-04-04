@@ -396,6 +396,7 @@ namespace programm
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Регистрация";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.regForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
