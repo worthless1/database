@@ -24,7 +24,7 @@ namespace programm
         private void UpIspDetForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM [Использованные детали] WHERE [Код детали] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM [Использованные_детали] WHERE [Код детали] = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
             SqlCommand sql1 = new SqlCommand("SELECT * FROM Заказы", connect);
             SqlCommand sql2 = new SqlCommand("SELECT * FROM Склад", connect);
@@ -67,7 +67,7 @@ namespace programm
         {
             if (comboBox1.Text != "" || textBox3.Text != "" || comboBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE [Использованные детали] SET [Номер заказа] = @id, [Код детали] = @det, [Количество] = @kolvo WHERE [Код ИД] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE [Использованные_детали] SET [Номер заказа] = @id, [Код детали] = @det, [Количество] = @kolvo WHERE [Код ИД] = @stroka", connect);
                 sql.Parameters.AddWithValue("@id", comboBox1.Text);
                 sql.Parameters.AddWithValue("@det", comboBox2.Text);
                 sql.Parameters.AddWithValue("@kolvo", textBox3.Text);
@@ -84,6 +84,15 @@ namespace programm
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Ввод в окно количество только цифр и использование служебных кнопок
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8)
+                e.Handled = true;
         }
     }
 }

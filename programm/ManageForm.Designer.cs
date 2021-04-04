@@ -61,7 +61,7 @@
             this.btnPrice.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnPrice.Location = new System.Drawing.Point(35, 322);
             this.btnPrice.Name = "btnPrice";
-            this.btnPrice.Size = new System.Drawing.Size(194, 56);
+            this.btnPrice.Size = new System.Drawing.Size(194, 50);
             this.btnPrice.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnPrice.TabIndex = 5;
             this.btnPrice.Text = "Прайс-лист";
@@ -77,7 +77,7 @@
             this.btnOrder.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnOrder.Location = new System.Drawing.Point(251, 322);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(189, 56);
+            this.btnOrder.Size = new System.Drawing.Size(189, 50);
             this.btnOrder.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnOrder.TabIndex = 6;
             this.btnOrder.Text = "Оформить заказ";
@@ -109,6 +109,7 @@
             this.mSwitch.Text = "On";
             this.mSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mSwitch.UseSelectable = true;
+            this.mSwitch.CheckedChanged += new System.EventHandler(this.mSwitch_CheckedChanged);
             // 
             // btnClose
             // 
@@ -124,11 +125,11 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(23, 60);
+            this.nameLabel.Location = new System.Drawing.Point(35, 60);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(158, 19);
+            this.nameLabel.Size = new System.Drawing.Size(188, 19);
             this.nameLabel.TabIndex = 28;
-            this.nameLabel.Text = "Иванов Иван Иванович";
+            this.nameLabel.Text = "Василькова Анна евгеньевна";
             // 
             // reportViewer1
             // 
@@ -153,10 +154,9 @@
             // 
             // ManageForm
             // 
-            this.AcceptButton = this.btnOrder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 395);
+            this.ClientSize = new System.Drawing.Size(476, 387);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.metroLabel1);

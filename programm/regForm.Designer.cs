@@ -64,7 +64,7 @@ namespace programm
             // 
             this.btnExit.AutoSize = true;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(326, 344);
+            this.btnExit.Location = new System.Drawing.Point(329, 334);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 19);
             this.btnExit.TabIndex = 22;
@@ -158,7 +158,7 @@ namespace programm
             this.PassBox.Location = new System.Drawing.Point(201, 82);
             this.PassBox.MaxLength = 32767;
             this.PassBox.Name = "PassBox";
-            this.PassBox.PasswordChar = '\0';
+            this.PassBox.PasswordChar = '●';
             this.PassBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.PassBox.SelectedText = "";
             this.PassBox.SelectionLength = 0;
@@ -168,13 +168,14 @@ namespace programm
             this.PassBox.Style = MetroFramework.MetroColorStyle.Teal;
             this.PassBox.TabIndex = 15;
             this.PassBox.UseSelectable = true;
+            this.PassBox.UseSystemPasswordChar = true;
             this.PassBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PassBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(10, 324);
+            this.metroLabel1.Location = new System.Drawing.Point(7, 312);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(77, 19);
             this.metroLabel1.TabIndex = 18;
@@ -186,7 +187,7 @@ namespace programm
             this.mSwitch.Checked = true;
             this.mSwitch.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mSwitch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.mSwitch.Location = new System.Drawing.Point(10, 346);
+            this.mSwitch.Location = new System.Drawing.Point(7, 334);
             this.mSwitch.Name = "mSwitch";
             this.mSwitch.Size = new System.Drawing.Size(80, 17);
             this.mSwitch.Style = MetroFramework.MetroColorStyle.Teal;
@@ -347,7 +348,7 @@ namespace programm
             this.telBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.telBox.Lines = new string[0];
             this.telBox.Location = new System.Drawing.Point(204, 212);
-            this.telBox.MaxLength = 32767;
+            this.telBox.MaxLength = 11;
             this.telBox.Name = "telBox";
             this.telBox.PasswordChar = '\0';
             this.telBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -361,12 +362,13 @@ namespace programm
             this.telBox.UseSelectable = true;
             this.telBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.telBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.telBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telBox_KeyPress);
             // 
             // regForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 374);
+            this.ClientSize = new System.Drawing.Size(387, 357);
             this.ControlBox = false;
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.telBox);

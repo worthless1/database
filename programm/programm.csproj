@@ -109,6 +109,9 @@
     <Compile Include="regForm.Designer.cs">
       <DependentUpon>regForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repair_serviceDataSet.cs">
+      <DependentUpon>Repair_serviceDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Repair_serviceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

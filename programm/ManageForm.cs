@@ -63,5 +63,13 @@ namespace programm
             this.diagram1TableAdapter.Fill(this.Repair_serviceDataSet.diagram1);
             this.reportViewer1.RefreshReport();
         }
+
+        private void mSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mSwitch.Checked)
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+            else
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+        }
     }
 }

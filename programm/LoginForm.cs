@@ -29,9 +29,9 @@ namespace programm
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
             //смена темы
-            if (mSwitch.Checked) 
+            if (mSwitch.Checked)
                 StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-            else 
+            else
                 StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
         }
 
@@ -104,7 +104,8 @@ namespace programm
                     }
                 }
             }
-            else { 
+            else
+            {
                 MessageBox.Show("Неверный логин или пароль, попробуйте снова", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 attempts++;
                 PassBox.Clear();
@@ -164,6 +165,20 @@ namespace programm
             checkBox1.Visible = false;
 
             getCapcha();
+        }
+
+        private void capchaBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Ввод в окно капчи только цифр и использование служебных кнопок
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8)
+                e.Handled = true;
+        }
+
+        private void PassBox_Click(object sender, EventArgs e)
+        {
+
         }
 
         void getCapcha()

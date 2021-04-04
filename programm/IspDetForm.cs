@@ -50,7 +50,7 @@ namespace programm
         {
             if (comboBox1.Text != "" || textBox1.Text != "" || comboBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("INSERT [Использованные детали] VALUES(@id, @det, @kolvo)", connect);
+                SqlCommand sql = new SqlCommand("INSERT [Использованные_детали] VALUES(@id, @det, @kolvo)", connect);
                 sql.Parameters.AddWithValue("@id", comboBox1.Text);
                 sql.Parameters.AddWithValue("@det", comboBox2.Text);
                 sql.Parameters.AddWithValue("@kolvo", textBox1.Text);

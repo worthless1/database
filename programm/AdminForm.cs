@@ -139,22 +139,22 @@ namespace programm
                     break;
                 case 6:
                     connect.Open();
-                    sql = new SqlCommand(@"SELECT * FROM [Оказанные услуги]", connect);
+                    sql = new SqlCommand(@"SELECT * FROM Оказанные_услуги", connect);
                     adapter = new SqlDataAdapter(sql);
                     ds = new DataSet();
                     adapter.Fill(ds);
                     metroGrid1.DataSource = ds.Tables[0];
-                    table_name = "Оказанные услуги";
+                    table_name = "Оказанные_услуги";
                     connect.Close();
                     break;
                 case 7:
                     connect.Open();
-                    sql = new SqlCommand(@"SELECT * FROM [Использованные детали]", connect);
+                    sql = new SqlCommand(@"SELECT * FROM Использованные_детали", connect);
                     adapter = new SqlDataAdapter(sql);
                     ds = new DataSet();
                     adapter.Fill(ds);
                     metroGrid1.DataSource = ds.Tables[0];
-                    table_name = "Использованные детали";
+                    table_name = "Использованные_детали";
                     connect.Close();
                     break;
             }
@@ -253,6 +253,12 @@ namespace programm
                     UpIspD.ShowDialog();
                     break;
             }
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            ManageForm mn = new ManageForm(1004);
+            mn.Show();
         }
     }
 }

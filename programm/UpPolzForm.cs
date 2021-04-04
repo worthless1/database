@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace programm
 {
@@ -32,7 +33,6 @@ namespace programm
                 while (reader.Read())
                 {
                     textBox1.Text = Convert.ToString(reader.GetValue(1));
-                    textBox2.Text = Convert.ToString(reader.GetValue(2));                    
                     ComboBox3.Text = Convert.ToString(reader.GetValue(3));
                 }
             }
@@ -44,9 +44,9 @@ namespace programm
         {
             if (textBox1.Text != "" || textBox2.Text != "" || ComboBox3.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE Пользователи SET [Логин] = @log, [Пароль] = @pass, [Уровень доступа] = @role WHERE [Код пользователя] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Пользователи SET [Логин] = @log, [Пароль] = @pass, [Уровень_доступа] = @role WHERE [Код пользователя] = @stroka", connect);
                 sql.Parameters.AddWithValue("@log", textBox1.Text);
-                sql.Parameters.AddWithValue("@pass", textBox2.Text);
+                sql.Parameters.AddWithValue("@pass", getHashSha256(textBox2.Text));
                 sql.Parameters.AddWithValue("@role", ComboBox3.Text);
                 sql.Parameters.AddWithValue("@stroka", labId.Text);
                 connect.Open();
@@ -61,6 +61,20 @@ namespace programm
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }       
+        }
+
+        private string getHashSha256(string text)
+        {
+            //Хэширование пароля
+            byte[] bytes = Encoding.UTF8.GetBytes(text);
+            SHA256Managed hashstring = new SHA256Managed();
+            byte[] hash = hashstring.ComputeHash(bytes);
+            string hashString = string.Empty;
+            foreach (byte x in hash)
+            {
+                hashString += String.Format("{0:x2}", x);
+            }
+            return hashString.ToString();
+        }
     }
 }

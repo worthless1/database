@@ -27,7 +27,7 @@ namespace programm
             SqlCommand sql = new SqlCommand("SELECT [Номер заказа] FROM Заказы", connect);
             SqlCommand sql1 = new SqlCommand("SELECT [Код сотрудника] FROM Сотрудники", connect);
             SqlCommand sql2 = new SqlCommand("SELECT [Код услуги] FROM Услуги", connect);
-            SqlCommand sql3 = new SqlCommand("SELECT * FROM [Оказанные услуги] WHERE [Код ОУ] = @id", connect);
+            SqlCommand sql3 = new SqlCommand("SELECT * FROM [Оказанные_услуги] WHERE [Код ОУ] = @id", connect);
             sql3.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
 
             SqlDataReader reader = sql.ExecuteReader();
@@ -79,7 +79,7 @@ namespace programm
         {
             if (comboBox1.Text != "" || comboBox4.Text != "" || comboBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE [Оказанные услуги] SET [Номер заказа] = @id1, [Код сотрудника] = @id2, [Дата] = @dateu, [Код услуги] = @id3 WHERE [Код ОУ] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE [Оказанные_услуги] SET [Номер заказа] = @id1, [Код сотрудника] = @id2, [Дата] = @dateu, [Код услуги] = @id3 WHERE [Код ОУ] = @stroka", connect);
                 sql.Parameters.AddWithValue("@id1", comboBox1.Text);
                 sql.Parameters.AddWithValue("@id2", comboBox2.Text);
                 sql.Parameters.AddWithValue("@dateu", dateBox3.Value);

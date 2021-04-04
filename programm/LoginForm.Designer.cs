@@ -167,6 +167,7 @@
             this.PassBox.UseSelectable = true;
             this.PassBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PassBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.PassBox.Click += new System.EventHandler(this.PassBox_Click);
             // 
             // logLabel
             // 
@@ -268,6 +269,7 @@
             this.capchaBox.Visible = false;
             this.capchaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.capchaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.capchaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.capchaBox_KeyPress);
             // 
             // LoginForm
             // 

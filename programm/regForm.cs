@@ -73,5 +73,14 @@ namespace programm
             }
             return hashString.ToString();
         }
+
+        private void telBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Ввод в окно телефона только цифр и использование служебных кнопок
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8)
+                e.Handled = true;
+        }
     }
 }

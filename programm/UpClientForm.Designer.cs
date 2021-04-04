@@ -77,7 +77,7 @@
             this.textBox4.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.textBox4.Lines = new string[0];
             this.textBox4.Location = new System.Drawing.Point(209, 223);
-            this.textBox4.MaxLength = 32767;
+            this.textBox4.MaxLength = 11;
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '\0';
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;

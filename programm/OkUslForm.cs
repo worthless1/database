@@ -60,7 +60,7 @@ namespace programm
         {
             if (comboBox1.Text != "" || comboBox4.Text != "" || comboBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("INSERT [Оказанные услуги] VALUES(@id1, @id2, @dateu, @id3)", connect);
+                SqlCommand sql = new SqlCommand("INSERT [Оказанные_услуги] VALUES(@id1, @id2, @dateu, @id3)", connect);
                 sql.Parameters.AddWithValue("@id1", comboBox1.Text);
                 sql.Parameters.AddWithValue("@id2", comboBox2.Text);
                 sql.Parameters.AddWithValue("@dateu", dateBox1.Value);
