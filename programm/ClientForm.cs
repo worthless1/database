@@ -22,7 +22,7 @@ namespace programm
         private void ClientForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT [Код пользователя] FROM Пользователи", connect);
+            SqlCommand sql = new SqlCommand("SELECT Код_пользователя FROM Пользователи", connect);
             SqlDataReader reader = sql.ExecuteReader();
 
             if (reader.HasRows)

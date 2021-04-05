@@ -24,7 +24,7 @@ namespace programm
         private void UpPolzForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Пользователи WHERE [Код пользователя] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Пользователи WHERE Код_пользователя = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -43,7 +43,7 @@ namespace programm
         {
             if (textBox1.Text != "" || textBox2.Text != "" || ComboBox3.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE Пользователи SET [Логин] = @log, [Пароль] = @pass, [Уровень_доступа] = @role WHERE [Код пользователя] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Пользователи SET Логин = @log, Пароль = @pass, Уровень_доступа = @role WHERE Код_пользователя = @stroka", connect);
                 sql.Parameters.AddWithValue("@log", textBox1.Text);
                 sql.Parameters.AddWithValue("@pass", getHashSha256(textBox2.Text));
                 sql.Parameters.AddWithValue("@role", ComboBox3.Text);

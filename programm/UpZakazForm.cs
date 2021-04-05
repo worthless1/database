@@ -23,7 +23,7 @@ namespace programm
         private void UpZakazForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE [Номер заказа] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE Номер_заказа = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(metroLabel6.Text));
             SqlCommand sql1 = new SqlCommand("SELECT * FROM Клиенты", connect);
             SqlDataReader reader = sql.ExecuteReader();
@@ -68,11 +68,11 @@ namespace programm
                 SqlCommand sql;
                 if (ComboBox2.Text == "В работе")
                 {
-                    sql = new SqlCommand("UPDATE Заказы SET [Код клиента] = @id, [Дата заказа] = @datez, [Описание] = @opis, [Статус] = @st WHERE [Номер заказа] = @stroka", connect);
+                    sql = new SqlCommand("UPDATE Заказы SET Код_клиента = @id, Дата_заказа = @datez, Описание = @opis, Статус = @st WHERE Номер_заказа = @stroka", connect);
                 }
                 else
                 {
-                    sql = new SqlCommand("UPDATE Заказы SET [Код клиента] = @id, [Дата заказа] = @datez, [Описание] = @opis, [Статус] = @st, [Дата закрытия] = @dataz WHERE [Номер заказа] = @stroka", connect);
+                    sql = new SqlCommand("UPDATE Заказы SET Код_клиента = @id, Дата_заказа = @datez, Описание = @opis, Статус = @st, Дата_закрытия = @dataz WHERE Номер_заказа = @stroka", connect);
                     sql.Parameters.AddWithValue("@dataz", DateBox2.Value);
                 }               
                 sql.Parameters.AddWithValue("@id", ComboBox1.Text);

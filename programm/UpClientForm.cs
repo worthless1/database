@@ -23,7 +23,7 @@ namespace programm
         private void UpClientForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Клиенты WHERE [Код клиента] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Клиенты WHERE Код_клиента = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
             SqlCommand sql1 = new SqlCommand("SELECT * FROM Пользователи", connect);
             SqlDataReader reader = sql.ExecuteReader();

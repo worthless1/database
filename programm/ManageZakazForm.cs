@@ -43,7 +43,7 @@ namespace programm
         {
             listBox.Clear();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Клиенты WHERE [Код клиента] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Клиенты WHERE Код_клиента = @id", connect);
             sql.Parameters.AddWithValue("@id", ComboBox1.Text);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -63,12 +63,13 @@ namespace programm
         private void metroTile3_Click(object sender, EventArgs e)
         {
             ClientForm Cli = new ClientForm();
+            this.StyleManager.Clone(Cli);
             Cli.Show();
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            SqlCommand sql = new SqlCommand("INSERT INTO Заказы([Код клиента], [Дата заказа], Описание, Статус) VALUES(@id, @datez, @opis, @st)", connect);
+            SqlCommand sql = new SqlCommand("INSERT INTO Заказы(Код_клиента, Дата_заказа, Описание, Статус) VALUES(@id, @datez, @opis, @st)", connect);
             sql.Parameters.AddWithValue("@id", ComboBox1.Text);
             sql.Parameters.AddWithValue("@datez", DateTime.Now);
             sql.Parameters.AddWithValue("@opis", textBox1.Text);

@@ -23,10 +23,10 @@ namespace programm
         private void UpSotrForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Сотрудники WHERE [Код сотрудника] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Сотрудники WHERE [Код_сотрудника] = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
 
-            SqlCommand sql1 = new SqlCommand("SELECT [Код пользователя] FROM Пользователи", connect);
+            SqlCommand sql1 = new SqlCommand("SELECT [Код_пользователя] FROM Пользователи", connect);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
             {
@@ -61,7 +61,7 @@ namespace programm
         {
             if (textBox1.Text != "" || textBox2.Text != "" || textBox3.Text != "" || comboBox4.Text != "" || textBox5.Text != "" || comboBox6.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE Сотрудники SET [Фамилия] = @fam, [Имя] = @name, [Отчество] = @otch, [Должность] = @dol, [Адрес] = @add, [Код пользователя] = @id WHERE [Код сотрудника] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Сотрудники SET Фамилия = @fam, Имя = @name, Отчество = @otch, Должность = @dol, Адрес = @add, Код_пользователя = @id WHERE Код_сотрудника = @stroka", connect);
                 sql.Parameters.AddWithValue("@fam", textBox1.Text);
                 sql.Parameters.AddWithValue("@name", textBox2.Text);
                 sql.Parameters.AddWithValue("@otch", textBox3.Text);

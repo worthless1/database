@@ -18,7 +18,7 @@ namespace programm
         {
             InitializeComponent();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT TRIM([Фамилия]), TRIM([Имя]), [Отчество] FROM Клиенты WHERE [Код пользователя] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT TRIM(Фамилия), TRIM(Имя), TRIM(Отчество) FROM Клиенты WHERE Код_пользователя = @id", connect);
             sql.Parameters.AddWithValue("@id", id);
 
             SqlCommand sql1 = new SqlCommand("Zakazi_klienta", connect);
@@ -67,7 +67,7 @@ namespace programm
         {
             listBox.Clear();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE [Номер заказа] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE Номер_заказа = @id", connect);
             sql.Parameters.AddWithValue("@id", comboBox1.Text);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)

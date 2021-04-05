@@ -25,7 +25,7 @@ namespace programm
             this.Склад1TableAdapter.Fill(this.Repair_serviceDataSet.Склад1);
             this.reportViewer1.RefreshReport();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE [Статус] = 'В работе'", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE Статус = 'В работе'", connect);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
             {
@@ -62,7 +62,7 @@ namespace programm
         {
             listBox.Clear();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE [Номер заказа] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Заказы WHERE Номер_заказа = @id", connect);
             sql.Parameters.AddWithValue("@id", comboBox1.Text);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -84,7 +84,7 @@ namespace programm
                 MessageBox.Show("Выберите заказ для закрытия", "Выполнение заказа", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                SqlCommand sql = new SqlCommand("UPDATE Заказы SET [Статус] = @st, [Дата закрытия] = @dataz WHERE [Номер заказа] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Заказы SET Статус = @st, Дата_закрытия = @dataz WHERE Номер_заказа = @stroka", connect);
                 sql.Parameters.AddWithValue("@st", "Выполнен");
                 sql.Parameters.AddWithValue("@dataz", DateTime.Now);
                 sql.Parameters.AddWithValue("@stroka", comboBox1.Text);

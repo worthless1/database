@@ -81,7 +81,7 @@
             this.btnREg.AutoSize = true;
             this.btnREg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnREg.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnREg.Location = new System.Drawing.Point(109, 281);
+            this.btnREg.Location = new System.Drawing.Point(107, 279);
             this.btnREg.Name = "btnREg";
             this.btnREg.Size = new System.Drawing.Size(120, 19);
             this.btnREg.TabIndex = 6;
@@ -94,7 +94,7 @@
             this.btnLogin.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btnLogin.ForeColor = System.Drawing.Color.Teal;
             this.btnLogin.Highlight = true;
-            this.btnLogin.Location = new System.Drawing.Point(118, 197);
+            this.btnLogin.Location = new System.Drawing.Point(118, 190);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(93, 27);
             this.btnLogin.Style = MetroFramework.MetroColorStyle.Teal;
@@ -167,7 +167,6 @@
             this.PassBox.UseSelectable = true;
             this.PassBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PassBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.PassBox.Click += new System.EventHandler(this.PassBox_Click);
             // 
             // logLabel
             // 
@@ -203,7 +202,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(109, 230);
+            this.checkBox1.Location = new System.Drawing.Point(105, 230);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(133, 15);
             this.checkBox1.TabIndex = 10;

@@ -34,18 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPagePolz = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageZakaz = new MetroFramework.Controls.MetroTabPage();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageClients = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageSotr = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageUslugi = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageSklad = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageOU = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageIspD = new MetroFramework.Controls.MetroTabPage();
             this.btnClose = new MetroFramework.Controls.MetroLabel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.btnRefresh = new MetroFramework.Controls.MetroTile();
@@ -57,7 +57,7 @@
             this.btnUpdate = new MetroFramework.Controls.MetroTile();
             this.btnManage = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
+            this.metroTabPageZakaz.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
@@ -65,14 +65,14 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Controls.Add(this.metroTabPage7);
-            this.metroTabControl1.Controls.Add(this.metroTabPage8);
+            this.metroTabControl1.Controls.Add(this.metroTabPagePolz);
+            this.metroTabControl1.Controls.Add(this.metroTabPageClients);
+            this.metroTabControl1.Controls.Add(this.metroTabPageZakaz);
+            this.metroTabControl1.Controls.Add(this.metroTabPageSotr);
+            this.metroTabControl1.Controls.Add(this.metroTabPageIspD);
+            this.metroTabControl1.Controls.Add(this.metroTabPageUslugi);
+            this.metroTabControl1.Controls.Add(this.metroTabPageSklad);
+            this.metroTabControl1.Controls.Add(this.metroTabPageOU);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
@@ -82,37 +82,37 @@
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.metroTabControl1_Selecting);
             // 
-            // metroTabPage1
+            // metroTabPagePolz
             // 
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(710, 2);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Пользователи";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPagePolz.HorizontalScrollbarBarColor = true;
+            this.metroTabPagePolz.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPagePolz.HorizontalScrollbarSize = 10;
+            this.metroTabPagePolz.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPagePolz.Name = "metroTabPagePolz";
+            this.metroTabPagePolz.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPagePolz.TabIndex = 0;
+            this.metroTabPagePolz.Text = "Пользователи";
+            this.metroTabPagePolz.VerticalScrollbarBarColor = true;
+            this.metroTabPagePolz.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPagePolz.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage3
+            // metroTabPageZakaz
             // 
-            this.metroTabPage3.Controls.Add(this.metroTextBox4);
-            this.metroTabPage3.Controls.Add(this.metroTextBox3);
-            this.metroTabPage3.Controls.Add(this.metroTextBox2);
-            this.metroTabPage3.Controls.Add(this.metroTextBox1);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Заказы";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
+            this.metroTabPageZakaz.Controls.Add(this.metroTextBox4);
+            this.metroTabPageZakaz.Controls.Add(this.metroTextBox3);
+            this.metroTabPageZakaz.Controls.Add(this.metroTextBox2);
+            this.metroTabPageZakaz.Controls.Add(this.metroTextBox1);
+            this.metroTabPageZakaz.HorizontalScrollbarBarColor = true;
+            this.metroTabPageZakaz.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageZakaz.HorizontalScrollbarSize = 10;
+            this.metroTabPageZakaz.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageZakaz.Name = "metroTabPageZakaz";
+            this.metroTabPageZakaz.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageZakaz.TabIndex = 2;
+            this.metroTabPageZakaz.Text = "Заказы";
+            this.metroTabPageZakaz.VerticalScrollbarBarColor = true;
+            this.metroTabPageZakaz.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageZakaz.VerticalScrollbarSize = 10;
             // 
             // metroTextBox4
             // 
@@ -242,89 +242,89 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTabPage2
+            // metroTabPageClients
             // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Клиенты";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.metroTabPageClients.HorizontalScrollbarBarColor = true;
+            this.metroTabPageClients.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageClients.HorizontalScrollbarSize = 10;
+            this.metroTabPageClients.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageClients.Name = "metroTabPageClients";
+            this.metroTabPageClients.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageClients.TabIndex = 1;
+            this.metroTabPageClients.Text = "Клиенты";
+            this.metroTabPageClients.VerticalScrollbarBarColor = true;
+            this.metroTabPageClients.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageClients.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage4
+            // metroTabPageSotr
             // 
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "Сотрудники";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
+            this.metroTabPageSotr.HorizontalScrollbarBarColor = true;
+            this.metroTabPageSotr.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageSotr.HorizontalScrollbarSize = 10;
+            this.metroTabPageSotr.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageSotr.Name = "metroTabPageSotr";
+            this.metroTabPageSotr.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageSotr.TabIndex = 3;
+            this.metroTabPageSotr.Text = "Сотрудники";
+            this.metroTabPageSotr.VerticalScrollbarBarColor = true;
+            this.metroTabPageSotr.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageSotr.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage5
+            // metroTabPageUslugi
             // 
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 10;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "Услуги";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 10;
+            this.metroTabPageUslugi.HorizontalScrollbarBarColor = true;
+            this.metroTabPageUslugi.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageUslugi.HorizontalScrollbarSize = 10;
+            this.metroTabPageUslugi.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageUslugi.Name = "metroTabPageUslugi";
+            this.metroTabPageUslugi.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageUslugi.TabIndex = 4;
+            this.metroTabPageUslugi.Text = "Услуги";
+            this.metroTabPageUslugi.VerticalScrollbarBarColor = true;
+            this.metroTabPageUslugi.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageUslugi.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage6
+            // metroTabPageSklad
             // 
-            this.metroTabPage6.HorizontalScrollbarBarColor = true;
-            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.HorizontalScrollbarSize = 10;
-            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage6.TabIndex = 5;
-            this.metroTabPage6.Text = "Склад";
-            this.metroTabPage6.VerticalScrollbarBarColor = true;
-            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.VerticalScrollbarSize = 10;
+            this.metroTabPageSklad.HorizontalScrollbarBarColor = true;
+            this.metroTabPageSklad.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageSklad.HorizontalScrollbarSize = 10;
+            this.metroTabPageSklad.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageSklad.Name = "metroTabPageSklad";
+            this.metroTabPageSklad.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageSklad.TabIndex = 5;
+            this.metroTabPageSklad.Text = "Склад";
+            this.metroTabPageSklad.VerticalScrollbarBarColor = true;
+            this.metroTabPageSklad.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageSklad.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage7
+            // metroTabPageOU
             // 
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.HorizontalScrollbarSize = 10;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "Оказанные услуги";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.VerticalScrollbarSize = 10;
+            this.metroTabPageOU.HorizontalScrollbarBarColor = true;
+            this.metroTabPageOU.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageOU.HorizontalScrollbarSize = 10;
+            this.metroTabPageOU.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageOU.Name = "metroTabPageOU";
+            this.metroTabPageOU.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageOU.TabIndex = 6;
+            this.metroTabPageOU.Text = "Оказанные услуги";
+            this.metroTabPageOU.VerticalScrollbarBarColor = true;
+            this.metroTabPageOU.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageOU.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage8
+            // metroTabPageIspD
             // 
-            this.metroTabPage8.HorizontalScrollbarBarColor = true;
-            this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.HorizontalScrollbarSize = 10;
-            this.metroTabPage8.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage8.Name = "metroTabPage8";
-            this.metroTabPage8.Size = new System.Drawing.Size(710, 5);
-            this.metroTabPage8.TabIndex = 8;
-            this.metroTabPage8.Text = "Использованные детали";
-            this.metroTabPage8.VerticalScrollbarBarColor = true;
-            this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.VerticalScrollbarSize = 10;
+            this.metroTabPageIspD.HorizontalScrollbarBarColor = true;
+            this.metroTabPageIspD.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageIspD.HorizontalScrollbarSize = 10;
+            this.metroTabPageIspD.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPageIspD.Name = "metroTabPageIspD";
+            this.metroTabPageIspD.Size = new System.Drawing.Size(710, 2);
+            this.metroTabPageIspD.TabIndex = 8;
+            this.metroTabPageIspD.Text = "Использованные детали";
+            this.metroTabPageIspD.VerticalScrollbarBarColor = true;
+            this.metroTabPageIspD.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageIspD.VerticalScrollbarSize = 10;
             // 
             // btnClose
             // 
@@ -509,7 +509,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPageZakaz.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
@@ -520,8 +520,8 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabPage metroTabPagePolz;
+        private MetroFramework.Controls.MetroTabPage metroTabPageClients;
         private MetroFramework.Controls.MetroLabel btnClose;
         private MetroFramework.Controls.MetroTile btnRefresh;
         private MetroFramework.Controls.MetroTile btnDelete;
@@ -529,12 +529,12 @@
         private MetroFramework.Controls.MetroToggle mSwitch;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroTabPage metroTabPage5;
-        private MetroFramework.Controls.MetroTabPage metroTabPage6;
-        private MetroFramework.Controls.MetroTabPage metroTabPage7;
-        private MetroFramework.Controls.MetroTabPage metroTabPage8;
+        private MetroFramework.Controls.MetroTabPage metroTabPageZakaz;
+        private MetroFramework.Controls.MetroTabPage metroTabPageSotr;
+        private MetroFramework.Controls.MetroTabPage metroTabPageUslugi;
+        private MetroFramework.Controls.MetroTabPage metroTabPageSklad;
+        private MetroFramework.Controls.MetroTabPage metroTabPageOU;
+        private MetroFramework.Controls.MetroTabPage metroTabPageIspD;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;

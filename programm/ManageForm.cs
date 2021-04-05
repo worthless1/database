@@ -18,7 +18,7 @@ namespace programm
         {
             InitializeComponent();
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT TRIM([Фамилия]), TRIM([Имя]), [Отчество] FROM Сотрудники WHERE [Код пользователя] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT TRIM(Фамилия), TRIM(Имя), TRIM(Отчество) FROM Сотрудники WHERE Код_пользователя = @id", connect);
             sql.Parameters.AddWithValue("@id", id);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -69,6 +69,7 @@ namespace programm
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
+            //переключатель темной темы
             if (mSwitch.Checked)
                 StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
             else

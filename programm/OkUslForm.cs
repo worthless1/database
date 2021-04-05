@@ -22,9 +22,9 @@ namespace programm
         private void OkUslForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT [Номер заказа] FROM Заказы", connect);
-            SqlCommand sql1 = new SqlCommand("SELECT [Код сотрудника] FROM Сотрудники", connect);
-            SqlCommand sql2 = new SqlCommand("SELECT [Код услуги] FROM Услуги", connect);
+            SqlCommand sql = new SqlCommand("SELECT Номер_заказа FROM Заказы", connect);
+            SqlCommand sql1 = new SqlCommand("SELECT Код_сотрудника FROM Сотрудники", connect);
+            SqlCommand sql2 = new SqlCommand("SELECT Код_услуги FROM Услуги", connect);
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
             {
@@ -59,7 +59,7 @@ namespace programm
         {
             if (comboBox1.Text != "" || comboBox4.Text != "" || comboBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("INSERT [Оказанные_услуги] VALUES(@id1, @id2, @dateu, @id3)", connect);
+                SqlCommand sql = new SqlCommand("INSERT Оказанные_услуги VALUES(@id1, @id2, @dateu, @id3)", connect);
                 sql.Parameters.AddWithValue("@id1", comboBox1.Text);
                 sql.Parameters.AddWithValue("@id2", comboBox2.Text);
                 sql.Parameters.AddWithValue("@dateu", dateBox1.Value);

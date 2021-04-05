@@ -42,7 +42,7 @@ namespace programm
                 //Если заказ имеет статус "В работе" то дата закрытия отсутсвует
                 SqlCommand sql;
                 if (ComboBox2.Text == "В работе")
-                    sql = new SqlCommand("INSERT INTO Заказы([Код клиента], [Дата заказа], Описание, Статус) VALUES(@id, @datez, @opis, @st)", connect);
+                    sql = new SqlCommand("INSERT INTO Заказы(Код_клиента, Дата_заказа, Описание, Статус) VALUES(@id, @datez, @opis, @st)", connect);
                 else
                 {
                     sql = new SqlCommand("INSERT Заказы VALUES(@id, @datez, @opis, @st, @dataz)", connect);

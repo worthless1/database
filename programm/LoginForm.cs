@@ -42,6 +42,7 @@ namespace programm
 
         private void btnReg_Click(object sender, EventArgs e)
         {
+            //форма регистрации
             regForm rg = new regForm();
             this.StyleManager.Clone(rg);
             this.Hide();
@@ -176,11 +177,6 @@ namespace programm
                 e.Handled = true;
         }
 
-        private void PassBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         void getCapcha()
         {
             //получение капчи
@@ -192,6 +188,7 @@ namespace programm
 
         private void btnReplace_Click(object sender, EventArgs e)
         {
+            //замена капчи
             getCapcha();
         }
     }

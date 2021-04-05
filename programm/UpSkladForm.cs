@@ -22,7 +22,7 @@ namespace programm
         private void UpSkladForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Склад WHERE [Код детали] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Склад WHERE Код_детали = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -42,7 +42,7 @@ namespace programm
         {
             if (textBox1.Text != "" || textBox2.Text != "" || textBox3.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE Склад SET [Наименование] = @naim, [Цена] = @cena, [Осталось] = @ost WHERE [Код детали] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Склад SET Наименование = @naim, Цена = @cena, Осталось = @ost WHERE Код_детали = @stroka", connect);
                 sql.Parameters.AddWithValue("@naim", textBox1.Text);
                 sql.Parameters.AddWithValue("@cena", textBox2.Text);
                 sql.Parameters.AddWithValue("@ost", textBox3.Text);

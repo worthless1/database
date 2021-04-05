@@ -23,7 +23,7 @@ namespace programm
         private void UpUslugForm_Load(object sender, EventArgs e)
         {
             connect.Open();
-            SqlCommand sql = new SqlCommand("SELECT * FROM Услуги WHERE [Код услуги] = @id", connect);
+            SqlCommand sql = new SqlCommand("SELECT * FROM Услуги WHERE Код_услуги = @id", connect);
             sql.Parameters.AddWithValue("@id", Convert.ToInt32(labId.Text));
             SqlDataReader reader = sql.ExecuteReader();
             if (reader.HasRows)
@@ -42,7 +42,7 @@ namespace programm
         {
             if (textBox1.Text != "" || textBox2.Text != "")
             {
-                SqlCommand sql = new SqlCommand("UPDATE Услуги SET [Наименование] = @naim, [Цена] = @cena WHERE [Код услуги] = @stroka", connect);
+                SqlCommand sql = new SqlCommand("UPDATE Услуги SET Наименование = @naim, Цена = @cena WHERE Код_услуги = @stroka", connect);
                 sql.Parameters.AddWithValue("@naim", textBox1.Text);
                 sql.Parameters.AddWithValue("@cena", textBox2.Text);
                 sql.Parameters.AddWithValue("@stroka", labId.Text);
