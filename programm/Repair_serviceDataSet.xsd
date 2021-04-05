@@ -75,12 +75,12 @@ SELECT [Номер заказа], [Код клиента], [Дата заказ�
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер заказа" />
-              <Mapping SourceColumn="Код клиента" DataSetColumn="Код клиента" />
-              <Mapping SourceColumn="Дата заказа" DataSetColumn="Дата заказа" />
+              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер_заказа" />
+              <Mapping SourceColumn="Код клиента" DataSetColumn="Код_клиента" />
+              <Mapping SourceColumn="Дата заказа" DataSetColumn="Дата_заказа" />
               <Mapping SourceColumn="Описание" DataSetColumn="Описание" />
               <Mapping SourceColumn="Статус" DataSetColumn="Статус" />
-              <Mapping SourceColumn="Дата закрытия" DataSetColumn="Дата закрытия" />
+              <Mapping SourceColumn="Дата закрытия" DataSetColumn="Дата_закрытия" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -140,9 +140,9 @@ SELECT [Код ИД], [Номер заказа], [Код детали], Коли
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Код ИД" DataSetColumn="Код ИД" />
-              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер заказа" />
-              <Mapping SourceColumn="Код детали" DataSetColumn="Код детали" />
+              <Mapping SourceColumn="Код ИД" DataSetColumn="Код_ИД" />
+              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер_заказа" />
+              <Mapping SourceColumn="Код детали" DataSetColumn="Код_детали" />
               <Mapping SourceColumn="Количество" DataSetColumn="Количество" />
             </Mappings>
             <Sources />
@@ -286,11 +286,11 @@ SELECT [Код ОУ], [Номер заказа], [Код сотрудника], 
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Код ОУ" DataSetColumn="Код ОУ" />
-              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер заказа" />
-              <Mapping SourceColumn="Код сотрудника" DataSetColumn="Код сотрудника" />
+              <Mapping SourceColumn="Код ОУ" DataSetColumn="Код_ОУ" />
+              <Mapping SourceColumn="Номер заказа" DataSetColumn="Номер_заказа" />
+              <Mapping SourceColumn="Код сотрудника" DataSetColumn="Код_сотрудника" />
               <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
-              <Mapping SourceColumn="Код услуги" DataSetColumn="Код услуги" />
+              <Mapping SourceColumn="Код услуги" DataSetColumn="Код_услуги" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -350,10 +350,10 @@ SELECT [Код пользователя], Логин, Пароль, [Урове�
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Код пользователя" DataSetColumn="Код пользователя" />
+              <Mapping SourceColumn="Код пользователя" DataSetColumn="Код_пользователя" />
               <Mapping SourceColumn="Логин" DataSetColumn="Логин" />
               <Mapping SourceColumn="Пароль" DataSetColumn="Пароль" />
-              <Mapping SourceColumn="Уровень доступа" DataSetColumn="Уровень доступа" />
+              <Mapping SourceColumn="Уровень доступа" DataSetColumn="Уровень_доступа" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -494,13 +494,13 @@ SELECT [Код сотрудника], Фамилия, Имя, Отчество, 
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Код сотрудника" DataSetColumn="Код сотрудника" />
+              <Mapping SourceColumn="Код сотрудника" DataSetColumn="Код_сотрудника" />
               <Mapping SourceColumn="Фамилия" DataSetColumn="Фамилия" />
               <Mapping SourceColumn="Имя" DataSetColumn="Имя" />
               <Mapping SourceColumn="Отчество" DataSetColumn="Отчество" />
               <Mapping SourceColumn="Должность" DataSetColumn="Должность" />
               <Mapping SourceColumn="Адрес" DataSetColumn="Адрес" />
-              <Mapping SourceColumn="Код пользователя" DataSetColumn="Код пользователя" />
+              <Mapping SourceColumn="Код пользователя" DataSetColumn="Код_пользователя" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -560,7 +560,7 @@ SELECT [Код услуги], Наименование, Цена, Примеча
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Код услуги" DataSetColumn="Код услуги" />
+              <Mapping SourceColumn="Код услуги" DataSetColumn="Код_услуги" />
               <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
               <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
               <Mapping SourceColumn="Примечание" DataSetColumn="Примечание" />
@@ -572,7 +572,7 @@ SELECT [Код услуги], Наименование, Цена, Примеча
               <DbSource ConnectionRef="con (Settings)" DbObjectName="Repair_service.dbo.Услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
+                    <CommandText>DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Кодуслуги" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Наименование" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -587,7 +587,7 @@ SELECT [Код услуги], Наименование, Цена, Примеча
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [Услуги] ([Наименование], [Цена], [Примечание]) VALUES (@Наименование, @Цена, @Примечание);
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())</CommandText>
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Цена" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Цена" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -597,15 +597,15 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена, Примечание
+                    <CommandText>SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена, Примечание
 FROM            Услуги</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Цена] = @Цена, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)</CommandText>
+                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Цена] = @Цена, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Цена" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Цена" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -617,7 +617,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Цена" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Цена" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Примечание" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код_услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -636,7 +636,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
               <DbSource ConnectionRef="con (Settings)" DbObjectName="Repair_service.dbo.Услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
+                    <CommandText>DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Кодуслуги" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Наименование" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -649,7 +649,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [Услуги] ([Наименование], [Примечание]) VALUES (@Наименование, @Примечание);
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())</CommandText>
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -658,15 +658,15 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Примечание
+                    <CommandText>SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примечание
 FROM            Услуги</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)</CommandText>
+                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -675,7 +675,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Примечание" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код_услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -684,8 +684,8 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             <Mappings>
               <Mapping SourceColumn="Кодуслуги" DataSetColumn="Кодуслуги" />
               <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
-              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
               <Mapping SourceColumn="Примечание" DataSetColumn="Примечание" />
+              <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -694,7 +694,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
               <DbSource ConnectionRef="con (Settings)" DbObjectName="Repair_service.dbo.Услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
+                    <CommandText>DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Кодуслуги" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Наименование" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -707,7 +707,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [Услуги] ([Наименование], [Примечание]) VALUES (@Наименование, @Примечание);
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())</CommandText>
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -716,15 +716,15 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Примечание
+                    <CommandText>SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Примечание
 FROM            Услуги</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)</CommandText>
+                    <CommandText>UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -733,7 +733,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Наименование" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Наименование" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Примечание" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Примечание" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Примечание" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Код_услуги" ColumnName="Код_услуги" DataSourceName="Repair_service.dbo.Услуги" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_услуги" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Кодуслуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -742,8 +742,8 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             <Mappings>
               <Mapping SourceColumn="Кодуслуги" DataSetColumn="Кодуслуги" />
               <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
-              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
               <Mapping SourceColumn="Примечание" DataSetColumn="Примечание" />
+              <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -821,9 +821,9 @@ FROM            diagram</CommandText>
         <xs:element name="Заказы" msprop:Generator_TableClassName="ЗаказыDataTable" msprop:Generator_TableVarName="tableЗаказы" msprop:Generator_RowChangedName="ЗаказыRowChanged" msprop:Generator_TablePropName="Заказы" msprop:Generator_RowDeletingName="ЗаказыRowDeleting" msprop:Generator_RowChangingName="ЗаказыRowChanging" msprop:Generator_RowEvHandlerName="ЗаказыRowChangeEventHandler" msprop:Generator_RowDeletedName="ЗаказыRowDeleted" msprop:Generator_RowClassName="ЗаказыRow" msprop:Generator_UserTableName="Заказы" msprop:Generator_RowEvArgName="ЗаказыRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Номер_x0020_заказа" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер заказа" type="xs:int" />
-              <xs:element name="Код_x0020_клиента" msprop:Generator_ColumnVarNameInTable="columnКод_клиента" msprop:Generator_ColumnPropNameInRow="Код_клиента" msprop:Generator_ColumnPropNameInTable="Код_клиентаColumn" msprop:Generator_UserColumnName="Код клиента" type="xs:int" minOccurs="0" />
-              <xs:element name="Дата_x0020_заказа" msprop:Generator_ColumnVarNameInTable="columnДата_заказа" msprop:Generator_ColumnPropNameInRow="Дата_заказа" msprop:Generator_ColumnPropNameInTable="Дата_заказаColumn" msprop:Generator_UserColumnName="Дата заказа" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Номер_заказа" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер_заказа" type="xs:int" />
+              <xs:element name="Код_клиента" msprop:Generator_ColumnVarNameInTable="columnКод_клиента" msprop:Generator_ColumnPropNameInRow="Код_клиента" msprop:Generator_ColumnPropNameInTable="Код_клиентаColumn" msprop:Generator_UserColumnName="Код_клиента" type="xs:int" minOccurs="0" />
+              <xs:element name="Дата_заказа" msprop:Generator_ColumnVarNameInTable="columnДата_заказа" msprop:Generator_ColumnPropNameInRow="Дата_заказа" msprop:Generator_ColumnPropNameInTable="Дата_заказаColumn" msprop:Generator_UserColumnName="Дата_заказа" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Описание" msprop:Generator_ColumnVarNameInTable="columnОписание" msprop:Generator_ColumnPropNameInRow="Описание" msprop:Generator_ColumnPropNameInTable="ОписаниеColumn" msprop:Generator_UserColumnName="Описание" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -838,16 +838,16 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Дата_x0020_закрытия" msprop:Generator_ColumnVarNameInTable="columnДата_закрытия" msprop:Generator_ColumnPropNameInRow="Дата_закрытия" msprop:Generator_ColumnPropNameInTable="Дата_закрытияColumn" msprop:Generator_UserColumnName="Дата закрытия" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Дата_закрытия" msprop:Generator_ColumnVarNameInTable="columnДата_закрытия" msprop:Generator_ColumnPropNameInRow="Дата_закрытия" msprop:Generator_ColumnPropNameInTable="Дата_закрытияColumn" msprop:Generator_UserColumnName="Дата_закрытия" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Использованные_x0020_детали" msprop:Generator_TableClassName="Использованные_деталиDataTable" msprop:Generator_TableVarName="tableИспользованные_детали" msprop:Generator_RowChangedName="Использованные_деталиRowChanged" msprop:Generator_TablePropName="Использованные_детали" msprop:Generator_RowDeletingName="Использованные_деталиRowDeleting" msprop:Generator_RowChangingName="Использованные_деталиRowChanging" msprop:Generator_RowEvHandlerName="Использованные_деталиRowChangeEventHandler" msprop:Generator_RowDeletedName="Использованные_деталиRowDeleted" msprop:Generator_RowClassName="Использованные_деталиRow" msprop:Generator_UserTableName="Использованные детали" msprop:Generator_RowEvArgName="Использованные_деталиRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код_x0020_ИД" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_ИД" msprop:Generator_ColumnPropNameInRow="Код_ИД" msprop:Generator_ColumnPropNameInTable="Код_ИДColumn" msprop:Generator_UserColumnName="Код ИД" type="xs:int" />
-              <xs:element name="Номер_x0020_заказа" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер заказа" type="xs:int" minOccurs="0" />
-              <xs:element name="Код_x0020_детали" msprop:Generator_ColumnVarNameInTable="columnКод_детали" msprop:Generator_ColumnPropNameInRow="Код_детали" msprop:Generator_ColumnPropNameInTable="Код_деталиColumn" msprop:Generator_UserColumnName="Код детали" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_ИД" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_ИД" msprop:Generator_ColumnPropNameInRow="Код_ИД" msprop:Generator_ColumnPropNameInTable="Код_ИДColumn" msprop:Generator_UserColumnName="Код_ИД" type="xs:int" />
+              <xs:element name="Номер_заказа" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер_заказа" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_детали" msprop:Generator_ColumnVarNameInTable="columnКод_детали" msprop:Generator_ColumnPropNameInRow="Код_детали" msprop:Generator_ColumnPropNameInTable="Код_деталиColumn" msprop:Generator_UserColumnName="Код_детали" type="xs:int" minOccurs="0" />
               <xs:element name="Количество" msprop:Generator_ColumnVarNameInTable="columnКоличество" msprop:Generator_ColumnPropNameInRow="Количество" msprop:Generator_ColumnPropNameInTable="КоличествоColumn" msprop:Generator_UserColumnName="Количество" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
@@ -891,18 +891,18 @@ FROM            diagram</CommandText>
         <xs:element name="Оказанные_x0020_услуги" msprop:Generator_TableClassName="Оказанные_услугиDataTable" msprop:Generator_TableVarName="tableОказанные_услуги" msprop:Generator_RowChangedName="Оказанные_услугиRowChanged" msprop:Generator_TablePropName="Оказанные_услуги" msprop:Generator_RowDeletingName="Оказанные_услугиRowDeleting" msprop:Generator_RowChangingName="Оказанные_услугиRowChanging" msprop:Generator_RowEvHandlerName="Оказанные_услугиRowChangeEventHandler" msprop:Generator_RowDeletedName="Оказанные_услугиRowDeleted" msprop:Generator_RowClassName="Оказанные_услугиRow" msprop:Generator_UserTableName="Оказанные услуги" msprop:Generator_RowEvArgName="Оказанные_услугиRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код_x0020_ОУ" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_ОУ" msprop:Generator_ColumnPropNameInRow="Код_ОУ" msprop:Generator_ColumnPropNameInTable="Код_ОУColumn" msprop:Generator_UserColumnName="Код ОУ" type="xs:int" />
-              <xs:element name="Номер_x0020_заказа" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер заказа" type="xs:int" minOccurs="0" />
-              <xs:element name="Код_x0020_сотрудника" msprop:Generator_ColumnVarNameInTable="columnКод_сотрудника" msprop:Generator_ColumnPropNameInRow="Код_сотрудника" msprop:Generator_ColumnPropNameInTable="Код_сотрудникаColumn" msprop:Generator_UserColumnName="Код сотрудника" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_ОУ" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_ОУ" msprop:Generator_ColumnPropNameInRow="Код_ОУ" msprop:Generator_ColumnPropNameInTable="Код_ОУColumn" msprop:Generator_UserColumnName="Код_ОУ" type="xs:int" />
+              <xs:element name="Номер_заказа" msprop:Generator_ColumnVarNameInTable="columnНомер_заказа" msprop:Generator_ColumnPropNameInRow="Номер_заказа" msprop:Generator_ColumnPropNameInTable="Номер_заказаColumn" msprop:Generator_UserColumnName="Номер_заказа" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_сотрудника" msprop:Generator_ColumnVarNameInTable="columnКод_сотрудника" msprop:Generator_ColumnPropNameInRow="Код_сотрудника" msprop:Generator_ColumnPropNameInTable="Код_сотрудникаColumn" msprop:Generator_UserColumnName="Код_сотрудника" type="xs:int" minOccurs="0" />
               <xs:element name="Дата" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Код_x0020_услуги" msprop:Generator_ColumnVarNameInTable="columnКод_услуги" msprop:Generator_ColumnPropNameInRow="Код_услуги" msprop:Generator_ColumnPropNameInTable="Код_услугиColumn" msprop:Generator_UserColumnName="Код услуги" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_услуги" msprop:Generator_ColumnVarNameInTable="columnКод_услуги" msprop:Generator_ColumnPropNameInRow="Код_услуги" msprop:Generator_ColumnPropNameInTable="Код_услугиColumn" msprop:Generator_UserColumnName="Код_услуги" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Пользователи" msprop:Generator_TableClassName="ПользователиDataTable" msprop:Generator_TableVarName="tableПользователи" msprop:Generator_RowChangedName="ПользователиRowChanged" msprop:Generator_TablePropName="Пользователи" msprop:Generator_RowDeletingName="ПользователиRowDeleting" msprop:Generator_RowChangingName="ПользователиRowChanging" msprop:Generator_RowEvHandlerName="ПользователиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПользователиRowDeleted" msprop:Generator_RowClassName="ПользователиRow" msprop:Generator_UserTableName="Пользователи" msprop:Generator_RowEvArgName="ПользователиRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код_x0020_пользователя" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_пользователя" msprop:Generator_ColumnPropNameInRow="Код_пользователя" msprop:Generator_ColumnPropNameInTable="Код_пользователяColumn" msprop:Generator_UserColumnName="Код пользователя" type="xs:int" />
+              <xs:element name="Код_пользователя" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_пользователя" msprop:Generator_ColumnPropNameInRow="Код_пользователя" msprop:Generator_ColumnPropNameInTable="Код_пользователяColumn" msprop:Generator_UserColumnName="Код_пользователя" type="xs:int" />
               <xs:element name="Логин" msprop:Generator_ColumnVarNameInTable="columnЛогин" msprop:Generator_ColumnPropNameInRow="Логин" msprop:Generator_ColumnPropNameInTable="ЛогинColumn" msprop:Generator_UserColumnName="Логин" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -917,7 +917,7 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Уровень_x0020_доступа" msprop:Generator_ColumnVarNameInTable="columnУровень_доступа" msprop:Generator_ColumnPropNameInRow="Уровень_доступа" msprop:Generator_ColumnPropNameInTable="Уровень_доступаColumn" msprop:Generator_UserColumnName="Уровень доступа" minOccurs="0">
+              <xs:element name="Уровень_доступа" msprop:Generator_ColumnVarNameInTable="columnУровень_доступа" msprop:Generator_ColumnPropNameInRow="Уровень_доступа" msprop:Generator_ColumnPropNameInTable="Уровень_доступаColumn" msprop:Generator_UserColumnName="Уровень_доступа" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -946,7 +946,7 @@ FROM            diagram</CommandText>
         <xs:element name="Сотрудники" msprop:Generator_TableClassName="СотрудникиDataTable" msprop:Generator_TableVarName="tableСотрудники" msprop:Generator_RowChangedName="СотрудникиRowChanged" msprop:Generator_TablePropName="Сотрудники" msprop:Generator_RowDeletingName="СотрудникиRowDeleting" msprop:Generator_RowChangingName="СотрудникиRowChanging" msprop:Generator_RowEvHandlerName="СотрудникиRowChangeEventHandler" msprop:Generator_RowDeletedName="СотрудникиRowDeleted" msprop:Generator_RowClassName="СотрудникиRow" msprop:Generator_UserTableName="Сотрудники" msprop:Generator_RowEvArgName="СотрудникиRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код_x0020_сотрудника" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_сотрудника" msprop:Generator_ColumnPropNameInRow="Код_сотрудника" msprop:Generator_ColumnPropNameInTable="Код_сотрудникаColumn" msprop:Generator_UserColumnName="Код сотрудника" type="xs:int" />
+              <xs:element name="Код_сотрудника" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_сотрудника" msprop:Generator_ColumnPropNameInRow="Код_сотрудника" msprop:Generator_ColumnPropNameInTable="Код_сотрудникаColumn" msprop:Generator_UserColumnName="Код_сотрудника" type="xs:int" />
               <xs:element name="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_UserColumnName="Фамилия" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -982,14 +982,14 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Код_x0020_пользователя" msprop:Generator_ColumnVarNameInTable="columnКод_пользователя" msprop:Generator_ColumnPropNameInRow="Код_пользователя" msprop:Generator_ColumnPropNameInTable="Код_пользователяColumn" msprop:Generator_UserColumnName="Код пользователя" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_пользователя" msprop:Generator_ColumnVarNameInTable="columnКод_пользователя" msprop:Generator_ColumnPropNameInRow="Код_пользователя" msprop:Generator_ColumnPropNameInTable="Код_пользователяColumn" msprop:Generator_UserColumnName="Код_пользователя" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Услуги" msprop:Generator_TableClassName="УслугиDataTable" msprop:Generator_TableVarName="tableУслуги" msprop:Generator_RowChangedName="УслугиRowChanged" msprop:Generator_TablePropName="Услуги" msprop:Generator_RowDeletingName="УслугиRowDeleting" msprop:Generator_RowChangingName="УслугиRowChanging" msprop:Generator_RowEvHandlerName="УслугиRowChangeEventHandler" msprop:Generator_RowDeletedName="УслугиRowDeleted" msprop:Generator_RowClassName="УслугиRow" msprop:Generator_UserTableName="Услуги" msprop:Generator_RowEvArgName="УслугиRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код_x0020_услуги" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_услуги" msprop:Generator_ColumnPropNameInRow="Код_услуги" msprop:Generator_ColumnPropNameInTable="Код_услугиColumn" msprop:Generator_UserColumnName="Код услуги" type="xs:int" />
+              <xs:element name="Код_услуги" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_услуги" msprop:Generator_ColumnPropNameInRow="Код_услуги" msprop:Generator_ColumnPropNameInTable="Код_услугиColumn" msprop:Generator_UserColumnName="Код_услуги" type="xs:int" />
               <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1041,7 +1041,6 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:decimal" minOccurs="0" />
               <xs:element name="Примечание" msprop:Generator_ColumnVarNameInTable="columnПримечание" msprop:Generator_ColumnPropNameInRow="Примечание" msprop:Generator_ColumnPropNameInTable="ПримечаниеColumn" msprop:Generator_UserColumnName="Примечание" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1049,6 +1048,7 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Цена" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_UserColumnName="Цена" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1063,7 +1063,6 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:decimal" minOccurs="0" />
               <xs:element name="Примечание" msprop:Generator_ColumnVarNameInTable="columnПримечание" msprop:Generator_ColumnPropNameInRow="Примечание" msprop:Generator_ColumnPropNameInTable="ПримечаниеColumn" msprop:Generator_UserColumnName="Примечание" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1071,6 +1070,7 @@ FROM            diagram</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Цена" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_UserColumnName="Цена" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1120,11 +1120,11 @@ FROM            diagram</CommandText>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Заказы" />
-      <xs:field xpath="mstns:Номер_x0020_заказа" />
+      <xs:field xpath="mstns:Номер_заказа" />
     </xs:unique>
     <xs:unique name="Использованные_x0020_детали_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Использованные_x0020_детали" />
-      <xs:field xpath="mstns:Код_x0020_ИД" />
+      <xs:field xpath="mstns:Код_ИД" />
     </xs:unique>
     <xs:unique name="Клиенты_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Клиенты" />
@@ -1132,11 +1132,11 @@ FROM            diagram</CommandText>
     </xs:unique>
     <xs:unique name="Оказанные_x0020_услуги_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Оказанные_x0020_услуги" />
-      <xs:field xpath="mstns:Код_x0020_ОУ" />
+      <xs:field xpath="mstns:Код_ОУ" />
     </xs:unique>
     <xs:unique name="Пользователи_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Пользователи" />
-      <xs:field xpath="mstns:Код_x0020_пользователя" />
+      <xs:field xpath="mstns:Код_пользователя" />
     </xs:unique>
     <xs:unique name="Склад_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Склад" />
@@ -1144,11 +1144,11 @@ FROM            diagram</CommandText>
     </xs:unique>
     <xs:unique name="Сотрудники_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Сотрудники" />
-      <xs:field xpath="mstns:Код_x0020_сотрудника" />
+      <xs:field xpath="mstns:Код_сотрудника" />
     </xs:unique>
     <xs:unique name="Услуги_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Услуги" />
-      <xs:field xpath="mstns:Код_x0020_услуги" />
+      <xs:field xpath="mstns:Код_услуги" />
     </xs:unique>
     <xs:unique name="Услуги1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Услуги1" />
@@ -1165,13 +1165,13 @@ FROM            diagram</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Использованные_x0020_детали_Заказы" msdata:parent="Заказы" msdata:child="Использованные_x0020_детали" msdata:parentkey="Номер_x0020_заказа" msdata:childkey="Номер_x0020_заказа" msprop:Generator_UserChildTable="Использованные детали" msprop:Generator_ChildPropName="GetИспользованные_деталиRows" msprop:Generator_UserRelationName="FK_Использованные детали_Заказы" msprop:Generator_RelationVarName="relationFK_Использованные_детали_Заказы" msprop:Generator_UserParentTable="Заказы" msprop:Generator_ParentPropName="ЗаказыRow" />
-      <msdata:Relationship name="FK_Использованные_x0020_детали_Склад" msdata:parent="Склад" msdata:child="Использованные_x0020_детали" msdata:parentkey="Код_x0020_детали" msdata:childkey="Код_x0020_детали" msprop:Generator_UserChildTable="Использованные детали" msprop:Generator_ChildPropName="GetИспользованные_деталиRows" msprop:Generator_UserRelationName="FK_Использованные детали_Склад" msprop:Generator_ParentPropName="СкладRow" msprop:Generator_RelationVarName="relationFK_Использованные_детали_Склад" msprop:Generator_UserParentTable="Склад" />
-      <msdata:Relationship name="FK_Клиенты_Пользователи" msdata:parent="Пользователи" msdata:child="Клиенты" msdata:parentkey="Код_x0020_пользователя" msdata:childkey="Код_x0020_пользователя" msprop:Generator_UserChildTable="Клиенты" msprop:Generator_ChildPropName="GetКлиентыRows" msprop:Generator_UserRelationName="FK_Клиенты_Пользователи" msprop:Generator_ParentPropName="ПользователиRow" msprop:Generator_RelationVarName="relationFK_Клиенты_Пользователи" msprop:Generator_UserParentTable="Пользователи" />
-      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Заказы" msdata:parent="Заказы" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Номер_x0020_заказа" msdata:childkey="Номер_x0020_заказа" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Заказы" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Заказы" msprop:Generator_UserParentTable="Заказы" msprop:Generator_ParentPropName="ЗаказыRow" />
-      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Сотрудники" msdata:parent="Сотрудники" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Код_x0020_сотрудника" msdata:childkey="Код_x0020_сотрудника" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Сотрудники" msprop:Generator_ParentPropName="СотрудникиRow" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Сотрудники" msprop:Generator_UserParentTable="Сотрудники" />
-      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Услуги" msdata:parent="Услуги" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Код_x0020_услуги" msdata:childkey="Код_x0020_услуги" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Услуги" msprop:Generator_ParentPropName="УслугиRow" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Услуги" msprop:Generator_UserParentTable="Услуги" />
-      <msdata:Relationship name="FK_Сотрудники_Пользователи" msdata:parent="Пользователи" msdata:child="Сотрудники" msdata:parentkey="Код_x0020_пользователя" msdata:childkey="Код_x0020_пользователя" msprop:Generator_UserChildTable="Сотрудники" msprop:Generator_ChildPropName="GetСотрудникиRows" msprop:Generator_UserRelationName="FK_Сотрудники_Пользователи" msprop:Generator_RelationVarName="relationFK_Сотрудники_Пользователи" msprop:Generator_UserParentTable="Пользователи" msprop:Generator_ParentPropName="ПользователиRow" />
+      <msdata:Relationship name="FK_Использованные_x0020_детали_Заказы" msdata:parent="Заказы" msdata:child="Использованные_x0020_детали" msdata:parentkey="Номер_заказа" msdata:childkey="Номер_заказа" msprop:Generator_UserChildTable="Использованные детали" msprop:Generator_ChildPropName="GetИспользованные_деталиRows" msprop:Generator_UserRelationName="FK_Использованные детали_Заказы" msprop:Generator_RelationVarName="relationFK_Использованные_детали_Заказы" msprop:Generator_UserParentTable="Заказы" msprop:Generator_ParentPropName="ЗаказыRow" />
+      <msdata:Relationship name="FK_Использованные_x0020_детали_Склад" msdata:parent="Склад" msdata:child="Использованные_x0020_детали" msdata:parentkey="Код_x0020_детали" msdata:childkey="Код_детали" msprop:Generator_UserChildTable="Использованные детали" msprop:Generator_ChildPropName="GetИспользованные_деталиRows" msprop:Generator_UserRelationName="FK_Использованные детали_Склад" msprop:Generator_ParentPropName="СкладRow" msprop:Generator_RelationVarName="relationFK_Использованные_детали_Склад" msprop:Generator_UserParentTable="Склад" />
+      <msdata:Relationship name="FK_Клиенты_Пользователи" msdata:parent="Пользователи" msdata:child="Клиенты" msdata:parentkey="Код_пользователя" msdata:childkey="Код_x0020_пользователя" msprop:Generator_UserChildTable="Клиенты" msprop:Generator_ChildPropName="GetКлиентыRows" msprop:Generator_UserRelationName="FK_Клиенты_Пользователи" msprop:Generator_ParentPropName="ПользователиRow" msprop:Generator_RelationVarName="relationFK_Клиенты_Пользователи" msprop:Generator_UserParentTable="Пользователи" />
+      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Заказы" msdata:parent="Заказы" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Номер_заказа" msdata:childkey="Номер_заказа" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Заказы" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Заказы" msprop:Generator_UserParentTable="Заказы" msprop:Generator_ParentPropName="ЗаказыRow" />
+      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Сотрудники" msdata:parent="Сотрудники" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Код_сотрудника" msdata:childkey="Код_сотрудника" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Сотрудники" msprop:Generator_ParentPropName="СотрудникиRow" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Сотрудники" msprop:Generator_UserParentTable="Сотрудники" />
+      <msdata:Relationship name="FK_Оказанные_x0020_услуги_Услуги" msdata:parent="Услуги" msdata:child="Оказанные_x0020_услуги" msdata:parentkey="Код_услуги" msdata:childkey="Код_услуги" msprop:Generator_UserChildTable="Оказанные услуги" msprop:Generator_ChildPropName="GetОказанные_услугиRows" msprop:Generator_UserRelationName="FK_Оказанные услуги_Услуги" msprop:Generator_ParentPropName="УслугиRow" msprop:Generator_RelationVarName="relationFK_Оказанные_услуги_Услуги" msprop:Generator_UserParentTable="Услуги" />
+      <msdata:Relationship name="FK_Сотрудники_Пользователи" msdata:parent="Пользователи" msdata:child="Сотрудники" msdata:parentkey="Код_пользователя" msdata:childkey="Код_пользователя" msprop:Generator_UserChildTable="Сотрудники" msprop:Generator_ChildPropName="GetСотрудникиRows" msprop:Generator_UserRelationName="FK_Сотрудники_Пользователи" msprop:Generator_RelationVarName="relationFK_Сотрудники_Пользователи" msprop:Generator_UserParentTable="Пользователи" msprop:Generator_ParentPropName="ПользователиRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

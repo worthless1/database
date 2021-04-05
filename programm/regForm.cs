@@ -28,6 +28,7 @@ namespace programm
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            //показ пароля
             if (checkBox1.Checked)
                 PassBox.PasswordChar = '\0';
             else
@@ -88,6 +89,15 @@ namespace programm
             //проверка включена ли темная тема для правильного отображения переключателя
             if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
                 mSwitch.Checked = false;
+        }
+
+        private void mSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            //смена темы
+            if (mSwitch.Checked)
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+            else
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
         }
     }
 }

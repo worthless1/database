@@ -951,28 +951,28 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnНомер_заказа = base.Columns["Номер заказа"];
-                this.columnКод_клиента = base.Columns["Код клиента"];
-                this.columnДата_заказа = base.Columns["Дата заказа"];
+                this.columnНомер_заказа = base.Columns["Номер_заказа"];
+                this.columnКод_клиента = base.Columns["Код_клиента"];
+                this.columnДата_заказа = base.Columns["Дата_заказа"];
                 this.columnОписание = base.Columns["Описание"];
                 this.columnСтатус = base.Columns["Статус"];
-                this.columnДата_закрытия = base.Columns["Дата закрытия"];
+                this.columnДата_закрытия = base.Columns["Дата_закрытия"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер заказа", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер_заказа", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНомер_заказа);
-                this.columnКод_клиента = new global::System.Data.DataColumn("Код клиента", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_клиента = new global::System.Data.DataColumn("Код_клиента", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_клиента);
-                this.columnДата_заказа = new global::System.Data.DataColumn("Дата заказа", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnДата_заказа = new global::System.Data.DataColumn("Дата_заказа", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_заказа);
                 this.columnОписание = new global::System.Data.DataColumn("Описание", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnОписание);
                 this.columnСтатус = new global::System.Data.DataColumn("Статус", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnСтатус);
-                this.columnДата_закрытия = new global::System.Data.DataColumn("Дата закрытия", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnДата_закрытия = new global::System.Data.DataColumn("Дата_закрытия", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_закрытия);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnНомер_заказа}, true));
@@ -1269,20 +1269,20 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnКод_ИД = base.Columns["Код ИД"];
-                this.columnНомер_заказа = base.Columns["Номер заказа"];
-                this.columnКод_детали = base.Columns["Код детали"];
+                this.columnКод_ИД = base.Columns["Код_ИД"];
+                this.columnНомер_заказа = base.Columns["Номер_заказа"];
+                this.columnКод_детали = base.Columns["Код_детали"];
                 this.columnКоличество = base.Columns["Количество"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnКод_ИД = new global::System.Data.DataColumn("Код ИД", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_ИД = new global::System.Data.DataColumn("Код_ИД", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_ИД);
-                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер заказа", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер_заказа", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНомер_заказа);
-                this.columnКод_детали = new global::System.Data.DataColumn("Код детали", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_детали = new global::System.Data.DataColumn("Код_детали", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_детали);
                 this.columnКоличество = new global::System.Data.DataColumn("Количество", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКоличество);
@@ -1610,6 +1610,10 @@ namespace programm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnКод_клиента = new global::System.Data.DataColumn("Код клиента", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_клиента.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "Код_клиента");
+                this.columnКод_клиента.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "Код_клиентаColumn");
+                this.columnКод_клиента.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnКод_клиента");
+                this.columnКод_клиента.ExtendedProperties.Add("Generator_UserColumnName", "Код клиента");
                 base.Columns.Add(this.columnКод_клиента);
                 this.columnФамилия = new global::System.Data.DataColumn("Фамилия", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnФамилия);
@@ -1932,25 +1936,25 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnКод_ОУ = base.Columns["Код ОУ"];
-                this.columnНомер_заказа = base.Columns["Номер заказа"];
-                this.columnКод_сотрудника = base.Columns["Код сотрудника"];
+                this.columnКод_ОУ = base.Columns["Код_ОУ"];
+                this.columnНомер_заказа = base.Columns["Номер_заказа"];
+                this.columnКод_сотрудника = base.Columns["Код_сотрудника"];
                 this.columnДата = base.Columns["Дата"];
-                this.columnКод_услуги = base.Columns["Код услуги"];
+                this.columnКод_услуги = base.Columns["Код_услуги"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnКод_ОУ = new global::System.Data.DataColumn("Код ОУ", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_ОУ = new global::System.Data.DataColumn("Код_ОУ", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_ОУ);
-                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер заказа", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnНомер_заказа = new global::System.Data.DataColumn("Номер_заказа", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНомер_заказа);
-                this.columnКод_сотрудника = new global::System.Data.DataColumn("Код сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_сотрудника = new global::System.Data.DataColumn("Код_сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_сотрудника);
                 this.columnДата = new global::System.Data.DataColumn("Дата", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата);
-                this.columnКод_услуги = new global::System.Data.DataColumn("Код услуги", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_услуги = new global::System.Data.DataColumn("Код_услуги", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_услуги);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод_ОУ}, true));
@@ -2239,22 +2243,26 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnКод_пользователя = base.Columns["Код пользователя"];
+                this.columnКод_пользователя = base.Columns["Код_пользователя"];
                 this.columnЛогин = base.Columns["Логин"];
                 this.columnПароль = base.Columns["Пароль"];
-                this.columnУровень_доступа = base.Columns["Уровень доступа"];
+                this.columnУровень_доступа = base.Columns["Уровень_доступа"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnКод_пользователя = new global::System.Data.DataColumn("Код пользователя", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_пользователя = new global::System.Data.DataColumn("Код_пользователя", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "Код_пользователя");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "Код_пользователяColumn");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnКод_пользователя");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_UserColumnName", "Код_пользователя");
                 base.Columns.Add(this.columnКод_пользователя);
                 this.columnЛогин = new global::System.Data.DataColumn("Логин", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnЛогин);
                 this.columnПароль = new global::System.Data.DataColumn("Пароль", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПароль);
-                this.columnУровень_доступа = new global::System.Data.DataColumn("Уровень доступа", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnУровень_доступа = new global::System.Data.DataColumn("Уровень_доступа", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnУровень_доступа);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод_пользователя}, true));
@@ -2556,6 +2564,10 @@ namespace programm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnКод_детали = new global::System.Data.DataColumn("Код детали", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_детали.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "Код_детали");
+                this.columnКод_детали.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "Код_деталиColumn");
+                this.columnКод_детали.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnКод_детали");
+                this.columnКод_детали.ExtendedProperties.Add("Generator_UserColumnName", "Код детали");
                 base.Columns.Add(this.columnКод_детали);
                 this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНаименование);
@@ -2887,19 +2899,19 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnКод_сотрудника = base.Columns["Код сотрудника"];
+                this.columnКод_сотрудника = base.Columns["Код_сотрудника"];
                 this.columnФамилия = base.Columns["Фамилия"];
                 this.columnИмя = base.Columns["Имя"];
                 this.columnОтчество = base.Columns["Отчество"];
                 this.columnДолжность = base.Columns["Должность"];
                 this.columnАдрес = base.Columns["Адрес"];
-                this.columnКод_пользователя = base.Columns["Код пользователя"];
+                this.columnКод_пользователя = base.Columns["Код_пользователя"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnКод_сотрудника = new global::System.Data.DataColumn("Код сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_сотрудника = new global::System.Data.DataColumn("Код_сотрудника", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_сотрудника);
                 this.columnФамилия = new global::System.Data.DataColumn("Фамилия", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnФамилия);
@@ -2911,7 +2923,11 @@ namespace programm {
                 base.Columns.Add(this.columnДолжность);
                 this.columnАдрес = new global::System.Data.DataColumn("Адрес", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnАдрес);
-                this.columnКод_пользователя = new global::System.Data.DataColumn("Код пользователя", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_пользователя = new global::System.Data.DataColumn("Код_пользователя", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "Код_пользователя");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "Код_пользователяColumn");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnКод_пользователя");
+                this.columnКод_пользователя.ExtendedProperties.Add("Generator_UserColumnName", "Код_пользователя");
                 base.Columns.Add(this.columnКод_пользователя);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод_сотрудника}, true));
@@ -3205,7 +3221,7 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnКод_услуги = base.Columns["Код услуги"];
+                this.columnКод_услуги = base.Columns["Код_услуги"];
                 this.columnНаименование = base.Columns["Наименование"];
                 this.columnЦена = base.Columns["Цена"];
                 this.columnПримечание = base.Columns["Примечание"];
@@ -3214,7 +3230,7 @@ namespace programm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnКод_услуги = new global::System.Data.DataColumn("Код услуги", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnКод_услуги = new global::System.Data.DataColumn("Код_услуги", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКод_услуги);
                 this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНаименование);
@@ -3675,9 +3691,9 @@ namespace programm {
             
             private global::System.Data.DataColumn columnНаименование;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
             private global::System.Data.DataColumn columnПримечание;
+            
+            private global::System.Data.DataColumn columnЦена;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3730,17 +3746,17 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn ПримечаниеColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnПримечание;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ПримечаниеColumn {
+            public global::System.Data.DataColumn ЦенаColumn {
                 get {
-                    return this.columnПримечание;
+                    return this.columnЦена;
                 }
             }
             
@@ -3781,13 +3797,13 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Услуги2Row AddУслуги2Row(string Наименование, decimal Expr1, string Примечание) {
+            public Услуги2Row AddУслуги2Row(string Наименование, string Примечание, decimal Цена) {
                 Услуги2Row rowУслуги2Row = ((Услуги2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Наименование,
-                        Expr1,
-                        Примечание};
+                        Примечание,
+                        Цена};
                 rowУслуги2Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowУслуги2Row);
                 return rowУслуги2Row;
@@ -3819,8 +3835,8 @@ namespace programm {
             internal void InitVars() {
                 this.columnКодуслуги = base.Columns["Кодуслуги"];
                 this.columnНаименование = base.Columns["Наименование"];
-                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnПримечание = base.Columns["Примечание"];
+                this.columnЦена = base.Columns["Цена"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3830,10 +3846,10 @@ namespace programm {
                 base.Columns.Add(this.columnКодуслуги);
                 this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНаименование);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
                 this.columnПримечание = new global::System.Data.DataColumn("Примечание", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПримечание);
+                this.columnЦена = new global::System.Data.DataColumn("Цена", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЦена);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКодуслуги}, true));
                 this.columnКодуслуги.AutoIncrement = true;
@@ -3843,8 +3859,8 @@ namespace programm {
                 this.columnКодуслуги.ReadOnly = true;
                 this.columnКодуслуги.Unique = true;
                 this.columnНаименование.MaxLength = 35;
-                this.columnExpr1.ReadOnly = true;
                 this.columnПримечание.MaxLength = 75;
+                this.columnЦена.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3982,9 +3998,9 @@ namespace programm {
             
             private global::System.Data.DataColumn columnНаименование;
             
-            private global::System.Data.DataColumn columnExpr1;
-            
             private global::System.Data.DataColumn columnПримечание;
+            
+            private global::System.Data.DataColumn columnЦена;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4037,17 +4053,17 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn ПримечаниеColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnПримечание;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ПримечаниеColumn {
+            public global::System.Data.DataColumn ЦенаColumn {
                 get {
-                    return this.columnПримечание;
+                    return this.columnЦена;
                 }
             }
             
@@ -4088,13 +4104,13 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Услуги3Row AddУслуги3Row(string Наименование, decimal Expr1, string Примечание) {
+            public Услуги3Row AddУслуги3Row(string Наименование, string Примечание, decimal Цена) {
                 Услуги3Row rowУслуги3Row = ((Услуги3Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Наименование,
-                        Expr1,
-                        Примечание};
+                        Примечание,
+                        Цена};
                 rowУслуги3Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowУслуги3Row);
                 return rowУслуги3Row;
@@ -4126,8 +4142,8 @@ namespace programm {
             internal void InitVars() {
                 this.columnКодуслуги = base.Columns["Кодуслуги"];
                 this.columnНаименование = base.Columns["Наименование"];
-                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnПримечание = base.Columns["Примечание"];
+                this.columnЦена = base.Columns["Цена"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4137,10 +4153,10 @@ namespace programm {
                 base.Columns.Add(this.columnКодуслуги);
                 this.columnНаименование = new global::System.Data.DataColumn("Наименование", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНаименование);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
                 this.columnПримечание = new global::System.Data.DataColumn("Примечание", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnПримечание);
+                this.columnЦена = new global::System.Data.DataColumn("Цена", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЦена);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКодуслуги}, true));
                 this.columnКодуслуги.AutoIncrement = true;
@@ -4150,8 +4166,8 @@ namespace programm {
                 this.columnКодуслуги.ReadOnly = true;
                 this.columnКодуслуги.Unique = true;
                 this.columnНаименование.MaxLength = 35;
-                this.columnExpr1.ReadOnly = true;
                 this.columnПримечание.MaxLength = 75;
+                this.columnЦена.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5097,7 +5113,7 @@ namespace programm {
                         return ((int)(this[this.tableЗаказы.Код_клиентаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код клиента\' в таблице \'Заказы\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код_клиента\' в таблице \'Заказы\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5113,7 +5129,7 @@ namespace programm {
                         return ((global::System.DateTime)(this[this.tableЗаказы.Дата_заказаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата заказа\' в таблице \'Заказы\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_заказа\' в таблице \'Заказы\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5161,7 +5177,7 @@ namespace programm {
                         return ((global::System.DateTime)(this[this.tableЗаказы.Дата_закрытияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата закрытия\' в таблице \'Заказы\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_закрытия\' в таблице \'Заказы\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5285,7 +5301,7 @@ namespace programm {
                         return ((int)(this[this.tableИспользованные_детали.Номер_заказаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер заказа\' в таблице \'Использованные детали\' равно DBNul" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер_заказа\' в таблице \'Использованные детали\' равно DBNul" +
                                 "l.", e);
                     }
                 }
@@ -5302,7 +5318,7 @@ namespace programm {
                         return ((int)(this[this.tableИспользованные_детали.Код_деталиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код детали\' в таблице \'Использованные детали\' равно DBNull." +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код_детали\' в таблице \'Использованные детали\' равно DBNull." +
                                 "", e);
                     }
                 }
@@ -5597,7 +5613,7 @@ namespace programm {
                         return ((int)(this[this.tableОказанные_услуги.Номер_заказаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер заказа\' в таблице \'Оказанные услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер_заказа\' в таблице \'Оказанные услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5613,7 +5629,7 @@ namespace programm {
                         return ((int)(this[this.tableОказанные_услуги.Код_сотрудникаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код сотрудника\' в таблице \'Оказанные услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код_сотрудника\' в таблице \'Оказанные услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5645,7 +5661,7 @@ namespace programm {
                         return ((int)(this[this.tableОказанные_услуги.Код_услугиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код услуги\' в таблице \'Оказанные услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код_услуги\' в таблице \'Оказанные услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5800,7 +5816,7 @@ namespace programm {
                         return ((string)(this[this.tableПользователи.Уровень_доступаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Уровень доступа\' в таблице \'Пользователи\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Уровень_доступа\' в таблице \'Пользователи\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6101,7 +6117,7 @@ namespace programm {
                         return ((int)(this[this.tableСотрудники.Код_пользователяColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код пользователя\' в таблице \'Сотрудники\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Код_пользователя\' в таблице \'Сотрудники\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6478,22 +6494,6 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal Expr1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableУслуги2.Expr1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Expr1\' в таблице \'Услуги2\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableУслуги2.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Примечание {
                 get {
                     try {
@@ -6505,6 +6505,22 @@ namespace programm {
                 }
                 set {
                     this[this.tableУслуги2.ПримечаниеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Цена {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableУслуги2.ЦенаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена\' в таблице \'Услуги2\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableУслуги2.ЦенаColumn] = value;
                 }
             }
             
@@ -6522,18 +6538,6 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tableУслуги2.Expr1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tableУслуги2.Expr1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsПримечаниеNull() {
                 return this.IsNull(this.tableУслуги2.ПримечаниеColumn);
             }
@@ -6542,6 +6546,18 @@ namespace programm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetПримечаниеNull() {
                 this[this.tableУслуги2.ПримечаниеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsЦенаNull() {
+                return this.IsNull(this.tableУслуги2.ЦенаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetЦенаNull() {
+                this[this.tableУслуги2.ЦенаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6588,22 +6604,6 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal Expr1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableУслуги3.Expr1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Expr1\' в таблице \'Услуги3\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableУслуги3.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Примечание {
                 get {
                     try {
@@ -6615,6 +6615,22 @@ namespace programm {
                 }
                 set {
                     this[this.tableУслуги3.ПримечаниеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Цена {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableУслуги3.ЦенаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена\' в таблице \'Услуги3\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableУслуги3.ЦенаColumn] = value;
                 }
             }
             
@@ -6632,18 +6648,6 @@ namespace programm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tableУслуги3.Expr1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tableУслуги3.Expr1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsПримечаниеNull() {
                 return this.IsNull(this.tableУслуги3.ПримечаниеColumn);
             }
@@ -6652,6 +6656,18 @@ namespace programm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetПримечаниеNull() {
                 this[this.tableУслуги3.ПримечаниеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsЦенаNull() {
+                return this.IsNull(this.tableУслуги3.ЦенаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetЦенаNull() {
+                this[this.tableУслуги3.ЦенаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7469,12 +7485,12 @@ namespace programm.Repair_serviceDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Заказы";
-            tableMapping.ColumnMappings.Add("Номер заказа", "Номер заказа");
-            tableMapping.ColumnMappings.Add("Код клиента", "Код клиента");
-            tableMapping.ColumnMappings.Add("Дата заказа", "Дата заказа");
+            tableMapping.ColumnMappings.Add("Номер заказа", "Номер_заказа");
+            tableMapping.ColumnMappings.Add("Код клиента", "Код_клиента");
+            tableMapping.ColumnMappings.Add("Дата заказа", "Дата_заказа");
             tableMapping.ColumnMappings.Add("Описание", "Описание");
             tableMapping.ColumnMappings.Add("Статус", "Статус");
-            tableMapping.ColumnMappings.Add("Дата закрытия", "Дата закрытия");
+            tableMapping.ColumnMappings.Add("Дата закрытия", "Дата_закрытия");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -7801,14 +7817,6 @@ SELECT [Номер заказа], [Код клиента], [Дата заказ�
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Код_клиента, global::System.Nullable<global::System.DateTime> Дата_заказа, string Описание, string Статус, global::System.Nullable<global::System.DateTime> Дата_закрытия, int Original_Номер_заказа, global::System.Nullable<int> Original_Код_клиента, global::System.Nullable<global::System.DateTime> Original_Дата_заказа, string Original_Описание, string Original_Статус, global::System.Nullable<global::System.DateTime> Original_Дата_закрытия) {
-            return this.Update(Код_клиента, Дата_заказа, Описание, Статус, Дата_закрытия, Original_Номер_заказа, Original_Код_клиента, Original_Дата_заказа, Original_Описание, Original_Статус, Original_Дата_закрытия, Original_Номер_заказа);
-        }
     }
     
     /// <summary>
@@ -7932,9 +7940,9 @@ SELECT [Номер заказа], [Код клиента], [Дата заказ�
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Использованные детали";
-            tableMapping.ColumnMappings.Add("Код ИД", "Код ИД");
-            tableMapping.ColumnMappings.Add("Номер заказа", "Номер заказа");
-            tableMapping.ColumnMappings.Add("Код детали", "Код детали");
+            tableMapping.ColumnMappings.Add("Код ИД", "Код_ИД");
+            tableMapping.ColumnMappings.Add("Номер заказа", "Номер_заказа");
+            tableMapping.ColumnMappings.Add("Код детали", "Код_детали");
             tableMapping.ColumnMappings.Add("Количество", "Количество");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -8193,14 +8201,6 @@ SELECT [Код ИД], [Номер заказа], [Код детали], Коли
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Номер_заказа, global::System.Nullable<int> Код_детали, global::System.Nullable<int> Количество, int Original_Код_ИД, global::System.Nullable<int> Original_Номер_заказа, global::System.Nullable<int> Original_Код_детали, global::System.Nullable<int> Original_Количество) {
-            return this.Update(Номер_заказа, Код_детали, Количество, Original_Код_ИД, Original_Номер_заказа, Original_Код_детали, Original_Количество, Original_Код_ИД);
         }
     }
     
@@ -8788,11 +8788,11 @@ SELECT [Код клиента], Фамилия, Имя, Отчество, Тел
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Оказанные услуги";
-            tableMapping.ColumnMappings.Add("Код ОУ", "Код ОУ");
-            tableMapping.ColumnMappings.Add("Номер заказа", "Номер заказа");
-            tableMapping.ColumnMappings.Add("Код сотрудника", "Код сотрудника");
+            tableMapping.ColumnMappings.Add("Код ОУ", "Код_ОУ");
+            tableMapping.ColumnMappings.Add("Номер заказа", "Номер_заказа");
+            tableMapping.ColumnMappings.Add("Код сотрудника", "Код_сотрудника");
             tableMapping.ColumnMappings.Add("Дата", "Дата");
-            tableMapping.ColumnMappings.Add("Код услуги", "Код услуги");
+            tableMapping.ColumnMappings.Add("Код услуги", "Код_услуги");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -9085,14 +9085,6 @@ SELECT [Код ОУ], [Номер заказа], [Код сотрудника], 
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Номер_заказа, global::System.Nullable<int> Код_сотрудника, global::System.Nullable<global::System.DateTime> Дата, global::System.Nullable<int> Код_услуги, int Original_Код_ОУ, global::System.Nullable<int> Original_Номер_заказа, global::System.Nullable<int> Original_Код_сотрудника, global::System.Nullable<global::System.DateTime> Original_Дата, global::System.Nullable<int> Original_Код_услуги) {
-            return this.Update(Номер_заказа, Код_сотрудника, Дата, Код_услуги, Original_Код_ОУ, Original_Номер_заказа, Original_Код_сотрудника, Original_Дата, Original_Код_услуги, Original_Код_ОУ);
-        }
     }
     
     /// <summary>
@@ -9216,10 +9208,10 @@ SELECT [Код ОУ], [Номер заказа], [Код сотрудника], 
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Пользователи";
-            tableMapping.ColumnMappings.Add("Код пользователя", "Код пользователя");
+            tableMapping.ColumnMappings.Add("Код пользователя", "Код_пользователя");
             tableMapping.ColumnMappings.Add("Логин", "Логин");
             tableMapping.ColumnMappings.Add("Пароль", "Пароль");
-            tableMapping.ColumnMappings.Add("Уровень доступа", "Уровень доступа");
+            tableMapping.ColumnMappings.Add("Уровень доступа", "Уровень_доступа");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -9478,14 +9470,6 @@ SELECT [Код пользователя], Логин, Пароль, [Урове�
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Логин, string Пароль, string Уровень_доступа, int Original_Код_пользователя, string Original_Логин, string Original_Пароль, string Original_Уровень_доступа) {
-            return this.Update(Логин, Пароль, Уровень_доступа, Original_Код_пользователя, Original_Логин, Original_Пароль, Original_Уровень_доступа, Original_Код_пользователя);
         }
     }
     
@@ -10003,13 +9987,13 @@ SELECT [Код детали], Наименование, Цена, Осталос
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Сотрудники";
-            tableMapping.ColumnMappings.Add("Код сотрудника", "Код сотрудника");
+            tableMapping.ColumnMappings.Add("Код сотрудника", "Код_сотрудника");
             tableMapping.ColumnMappings.Add("Фамилия", "Фамилия");
             tableMapping.ColumnMappings.Add("Имя", "Имя");
             tableMapping.ColumnMappings.Add("Отчество", "Отчество");
             tableMapping.ColumnMappings.Add("Должность", "Должность");
             tableMapping.ColumnMappings.Add("Адрес", "Адрес");
-            tableMapping.ColumnMappings.Add("Код пользователя", "Код пользователя");
+            tableMapping.ColumnMappings.Add("Код пользователя", "Код_пользователя");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -10370,14 +10354,6 @@ SELECT [Код сотрудника], Фамилия, Имя, Отчество, 
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Фамилия, string Имя, string Отчество, string Должность, string Адрес, global::System.Nullable<int> Код_пользователя, int Original_Код_сотрудника, string Original_Фамилия, string Original_Имя, string Original_Отчество, string Original_Должность, string Original_Адрес, global::System.Nullable<int> Original_Код_пользователя) {
-            return this.Update(Фамилия, Имя, Отчество, Должность, Адрес, Код_пользователя, Original_Код_сотрудника, Original_Фамилия, Original_Имя, Original_Отчество, Original_Должность, Original_Адрес, Original_Код_пользователя, Original_Код_сотрудника);
-        }
     }
     
     /// <summary>
@@ -10501,7 +10477,7 @@ SELECT [Код сотрудника], Фамилия, Имя, Отчество, 
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Услуги";
-            tableMapping.ColumnMappings.Add("Код услуги", "Код услуги");
+            tableMapping.ColumnMappings.Add("Код услуги", "Код_услуги");
             tableMapping.ColumnMappings.Add("Наименование", "Наименование");
             tableMapping.ColumnMappings.Add("Цена", "Цена");
             tableMapping.ColumnMappings.Add("Примечание", "Примечание");
@@ -10763,14 +10739,6 @@ SELECT [Код услуги], Наименование, Цена, Примеча
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Наименование, global::System.Nullable<decimal> Цена, string Примечание, int Original_Код_услуги, string Original_Наименование, global::System.Nullable<decimal> Original_Цена, string Original_Примечание) {
-            return this.Update(Наименование, Цена, Примечание, Original_Код_услуги, Original_Наименование, Original_Цена, Original_Примечание, Original_Код_услуги);
-        }
     }
     
     /// <summary>
@@ -10901,7 +10869,7 @@ SELECT [Код услуги], Наименование, Цена, Примеча
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кодуслуги", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кодуслуги", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Наименование", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -10913,16 +10881,16 @@ SELECT [Код услуги], Наименование, Цена, Примеча
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Услуги] ([Наименование], [Цена], [Примечание]) VALUES (@Наименование" +
-                ", @Цена, @Примечание);\r\nSELECT [Код услуги] AS Кодуслуги, Наименование, Цена, Пр" +
-                "имечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())";
+                ", @Цена, @Примечание);\r\nSELECT Код_услуги AS Кодуслуги, Наименование, Цена, Прим" +
+                "ечание FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Цена", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Цена", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Примечание", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Примечание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Цена] = @Цена, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Цена] = @Цена, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Цена = 1 AND [Цена] IS NULL) OR ([Цена] = @Original_Цена)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Цена", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Цена", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10950,7 +10918,7 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена, Примечание\r\nFROM    " +
+            this._commandCollection[0].CommandText = "SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена, Примечание\r\nFROM    " +
                 "        Услуги";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -11290,12 +11258,12 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             tableMapping.DataSetTable = "Услуги2";
             tableMapping.ColumnMappings.Add("Кодуслуги", "Кодуслуги");
             tableMapping.ColumnMappings.Add("Наименование", "Наименование");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             tableMapping.ColumnMappings.Add("Примечание", "Примечание");
+            tableMapping.ColumnMappings.Add("Цена", "Цена");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кодуслуги", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кодуслуги", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Наименование", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11305,15 +11273,15 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Услуги] ([Наименование], [Примечание]) VALUES (@Наименование, @Приме" +
-                "чание);\r\nSELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Прим" +
-                "ечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())";
+                "чание);\r\nSELECT Код_услуги AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примеча" +
+                "ние FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Примечание", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Примечание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Примечание", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Примечание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11338,8 +11306,8 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена * 2 AS Expr1, Примеча" +
-                "ние\r\nFROM            Услуги";
+            this._commandCollection[0].CommandText = "SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена * 2 AS Цена, Примечан" +
+                "ие\r\nFROM            Услуги";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11650,12 +11618,12 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             tableMapping.DataSetTable = "Услуги3";
             tableMapping.ColumnMappings.Add("Кодуслуги", "Кодуслуги");
             tableMapping.ColumnMappings.Add("Наименование", "Наименование");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             tableMapping.ColumnMappings.Add("Примечание", "Примечание");
+            tableMapping.ColumnMappings.Add("Цена", "Цена");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Услуги] WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кодуслуги", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кодуслуги", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Наименование", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11665,15 +11633,15 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Услуги] ([Наименование], [Примечание]) VALUES (@Наименование, @Приме" +
-                "чание);\r\nSELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Пр" +
-                "имечание FROM Услуги WHERE ([Код услуги] = SCOPE_IDENTITY())";
+                "чание);\r\nSELECT Код_услуги AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Приме" +
+                "чание FROM Услуги WHERE (Код_услуги = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Примечание", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Примечание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
-SELECT [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Примечание FROM Услуги WHERE ([Код услуги] = @Код_услуги)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Услуги] SET [Наименование] = @Наименование, [Примечание] = @Примечание WHERE (([Код_услуги] = @Original_Кодуслуги) AND ((@IsNull_Наименование = 1 AND [Наименование] IS NULL) OR ([Наименование] = @Original_Наименование)) AND ((@IsNull_Примечание = 1 AND [Примечание] IS NULL) OR ([Примечание] = @Original_Примечание)));
+SELECT Код_услуги AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Примечание FROM Услуги WHERE (Код_услуги = @Код_услуги)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Наименование", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Наименование", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Примечание", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Примечание", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11698,8 +11666,8 @@ SELECT [Код услуги] AS Кодуслуги, Наименование, Ц
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        [Код услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Expr1, Приме" +
-                "чание\r\nFROM            Услуги";
+            this._commandCollection[0].CommandText = "SELECT        [Код_услуги] AS Кодуслуги, Наименование, Цена * 0.7 AS Цена, Примеч" +
+                "ание\r\nFROM            Услуги";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

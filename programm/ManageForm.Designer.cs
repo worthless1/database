@@ -33,14 +33,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageForm));
             this.diagram1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Repair_serviceDataSet = new programm.Repair_serviceDataSet();
-            this.btnPrice = new MetroFramework.Controls.MetroTile();
-            this.btnOrder = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.mSwitch = new MetroFramework.Controls.MetroToggle();
             this.btnClose = new MetroFramework.Controls.MetroLabel();
             this.nameLabel = new MetroFramework.Controls.MetroLabel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.diagram1TableAdapter = new programm.Repair_serviceDataSetTableAdapters.diagram1TableAdapter();
+            this.btnPrice = new MetroFramework.Controls.MetroTile();
+            this.btnOrder = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.diagram1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Repair_serviceDataSet)).BeginInit();
             this.SuspendLayout();
@@ -54,38 +54,6 @@
             // 
             this.Repair_serviceDataSet.DataSetName = "Repair_serviceDataSet";
             this.Repair_serviceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnPrice
-            // 
-            this.btnPrice.ActiveControl = null;
-            this.btnPrice.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnPrice.Location = new System.Drawing.Point(35, 322);
-            this.btnPrice.Name = "btnPrice";
-            this.btnPrice.Size = new System.Drawing.Size(194, 50);
-            this.btnPrice.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnPrice.TabIndex = 5;
-            this.btnPrice.Text = "Прайс-лист";
-            this.btnPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrice.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnPrice.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.btnPrice.UseSelectable = true;
-            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.ActiveControl = null;
-            this.btnOrder.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnOrder.Location = new System.Drawing.Point(251, 322);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(189, 50);
-            this.btnOrder.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnOrder.TabIndex = 6;
-            this.btnOrder.Text = "Оформить заказ";
-            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOrder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnOrder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.btnOrder.UseSelectable = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // metroLabel1
             // 
@@ -152,18 +120,50 @@
             // 
             this.diagram1TableAdapter.ClearBeforeFill = true;
             // 
+            // btnPrice
+            // 
+            this.btnPrice.ActiveControl = null;
+            this.btnPrice.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnPrice.Location = new System.Drawing.Point(34, 322);
+            this.btnPrice.Name = "btnPrice";
+            this.btnPrice.Size = new System.Drawing.Size(195, 50);
+            this.btnPrice.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnPrice.TabIndex = 30;
+            this.btnPrice.Text = "Прайс-листы";
+            this.btnPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrice.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnPrice.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnPrice.UseSelectable = true;
+            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.ActiveControl = null;
+            this.btnOrder.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnOrder.Location = new System.Drawing.Point(248, 322);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(192, 50);
+            this.btnOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnOrder.TabIndex = 31;
+            this.btnOrder.Text = "Оформить заказ";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOrder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnOrder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnOrder.UseSelectable = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // ManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 387);
+            this.ClientSize = new System.Drawing.Size(476, 382);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.btnPrice);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.mSwitch);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnOrder);
-            this.Controls.Add(this.btnPrice);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -181,9 +181,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTile btnPrice;
-        private MetroFramework.Controls.MetroTile btnOrder;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroToggle mSwitch;
         private MetroFramework.Controls.MetroLabel btnClose;
@@ -192,5 +189,7 @@
         private System.Windows.Forms.BindingSource diagram1BindingSource;
         private Repair_serviceDataSet Repair_serviceDataSet;
         private Repair_serviceDataSetTableAdapters.diagram1TableAdapter diagram1TableAdapter;
+        private MetroFramework.Controls.MetroTile btnPrice;
+        private MetroFramework.Controls.MetroTile btnOrder;
     }
 }

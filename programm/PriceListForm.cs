@@ -24,27 +24,27 @@ namespace programm
 
         private void PriceListForm_Load(object sender, EventArgs e)
         {
+            //проверка включена ли темная тема для правильного отображения переключателя
+            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
+                mSwitch.Checked = false;
+
             metroTabControl1.SelectedTab = metroTabControl1.TabPages[0];
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "Repair_serviceDataSet.Услуги3". При необходимости она может быть перемещена или удалена.
+
             this.Услуги3TableAdapter.Fill(this.Repair_serviceDataSet.Услуги3);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "Repair_serviceDataSet.Услуги2". При необходимости она может быть перемещена или удалена.
             this.Услуги2TableAdapter.Fill(this.Repair_serviceDataSet.Услуги2);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "Repair_serviceDataSet.Услуги1". При необходимости она может быть перемещена или удалена.
             this.Услуги1TableAdapter.Fill(this.Repair_serviceDataSet.Услуги1);
+
             this.reportViewer1.RefreshReport();
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
             this.reportViewer5.RefreshReport();
             this.reportViewer6.RefreshReport();
-
-            //проверка включена ли темная тема для правильного отображения переключателя
-            if (this.StyleManager.Theme == MetroFramework.MetroThemeStyle.Dark)
-                mSwitch.Checked = false;
         }
 
         private void mSwitch_CheckedChanged(object sender, EventArgs e)
         {
+            //смена темы
             if (mSwitch.Checked) 
                 StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
             else 

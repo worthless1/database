@@ -67,7 +67,7 @@
                             <TextRun>
                               <Value>Наименование</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -101,7 +101,7 @@
                             <TextRun>
                               <Value>Цена</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -135,7 +135,7 @@
                             <TextRun>
                               <Value>Примечание</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -174,7 +174,7 @@
                             <TextRun>
                               <Value>=Fields!Кодуслуги.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -209,7 +209,7 @@
                             <TextRun>
                               <Value>=Fields!Наименование.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -244,7 +244,7 @@
                             <TextRun>
                               <Value>=Fields!Цена.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
@@ -281,7 +281,7 @@
                             <TextRun>
                               <Value>=Fields!Примечание.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -328,7 +328,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>0.60417in</Height>
-        <Width>6.23959in</Width>
+        <Width>6.2396in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -339,7 +339,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.23959in</Width>
+  <Width>6.2396in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -383,7 +383,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Repair_serviceDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\edu\help me pls\Курсовик\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\edu\2021\Курсовик2\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Услуги1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

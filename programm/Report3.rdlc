@@ -33,7 +33,7 @@
                             <TextRun>
                               <Value>№</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -67,7 +67,7 @@
                             <TextRun>
                               <Value>Наименование</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -101,7 +101,7 @@
                             <TextRun>
                               <Value>Цена</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -135,7 +135,7 @@
                             <TextRun>
                               <Value>Примечание</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -174,7 +174,7 @@
                             <TextRun>
                               <Value>=Fields!Кодуслуги.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -208,7 +208,7 @@
                             <TextRun>
                               <Value>=Fields!Наименование.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -233,16 +233,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Expr1">
+                    <Textbox Name="Цена">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Expr1.Value</Value>
+                              <Value>=Fields!Цена.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
@@ -253,7 +253,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Expr1</rd:DefaultName>
+                      <rd:DefaultName>Цена</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -279,7 +279,7 @@
                             <TextRun>
                               <Value>=Fields!Примечание.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
@@ -370,18 +370,18 @@
           <DataField>Наименование</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Expr1">
-          <DataField>Expr1</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="Примечание">
           <DataField>Примечание</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Цена">
+          <DataField>Цена</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Repair_serviceDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\edu\help me pls\Курсовик\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\edu\2021\Курсовик2\programm\programm\Repair_serviceDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Услуги3</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

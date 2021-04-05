@@ -194,6 +194,7 @@ namespace programm
             this.mSwitch.TabIndex = 16;
             this.mSwitch.Text = "On";
             this.mSwitch.UseSelectable = true;
+            this.mSwitch.CheckedChanged += new System.EventHandler(this.mSwitch_CheckedChanged);
             // 
             // metroLabel2
             // 

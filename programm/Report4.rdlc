@@ -27,7 +27,7 @@
                             <TextRun>
                               <Value>Наименование</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -61,7 +61,7 @@
                             <TextRun>
                               <Value>Осталось</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -100,7 +100,7 @@
                             <TextRun>
                               <Value>=Fields!Наименование.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -134,7 +134,7 @@
                             <TextRun>
                               <Value>=Fields!Осталось.Value</Value>
                               <Style>
-                                <FontFamily>Open Sans</FontFamily>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>

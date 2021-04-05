@@ -4,6 +4,17 @@
 
     partial class Repair_serviceDataSet
     {
+        partial class Использованные_деталиDataTable
+        {
+        }
+
+        partial class Оказанные_услугиDataTable
+        {
+        }
+
+        partial class СотрудникиDataTable
+        {
+        }
     }
 }
 
