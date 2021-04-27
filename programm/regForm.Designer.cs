@@ -168,7 +168,6 @@ namespace programm
             this.PassBox.Style = MetroFramework.MetroColorStyle.Teal;
             this.PassBox.TabIndex = 15;
             this.PassBox.UseSelectable = true;
-            this.PassBox.UseSystemPasswordChar = true;
             this.PassBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PassBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 

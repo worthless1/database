@@ -19,6 +19,7 @@ namespace programm
         public regForm()
         {
             InitializeComponent();
+            PassBox.PasswordChar = '•';
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace programm
                 connect.Open();
                 sql.ExecuteNonQuery();
                 connect.Close();
-                MessageBox.Show("Запись была успешно добавлена в базу данных", "Добавление записи", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Вы успешно зарегистрировались", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 LoginForm log = new LoginForm();
                 this.StyleManager.Clone(log);
